@@ -1,0 +1,12 @@
+{
+  "name": "@xurunxin/tapnow-cli",
+  "version": "0.1.0",
+  "description": "Manage TapNow canvas projects and resumable image/video workflows from the terminal",
+  "type": "module",
+  "bin": { "tapnow": "bin/tapnow.mjs" },
+  "engines": { "node": ">=22" },
+  "scripts": { "test": "node --test", "check": "node --check bin/tapnow.mjs", "start": "node bin/tapnow.mjs" },
+  "files": ["bin", "src", "data", "examples", "README.md"],
+  "dependencies": { "commander": "^14.0.0", "playwright": "^1.55.0", "zod": "^4.1.0" },
+  "private": true
+}

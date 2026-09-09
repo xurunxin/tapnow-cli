@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "project": { "key": "blue-cube-demo", "name": "Blue Cube Film", "description": "Create a hero image, then animate it", "team": false },
+  "nodes": [
+    { "id": "brief", "type": "text", "prompt": "Minimal product photography. A single matte blue cube on a clean white studio background." },
+    { "id": "hero", "type": "image", "model": "nano-banana-flash", "prompt": "Soft shadows, wide composition, no text.", "params": { "aspectRatio": "16:9", "imageSize": "1K" } },
+    { "id": "film", "type": "video", "model": "veo3.1-lite", "mode": "image_to_video", "prompt": "The blue cube slowly rotates. Static camera, clean white studio.", "params": { "aspectRatio": "16:9", "duration": 4, "resolution": "720p", "generateAudio": false } }
+  ],
+  "links": [ { "from": "brief", "to": "hero" }, { "from": "hero", "to": "film" } ]
+}

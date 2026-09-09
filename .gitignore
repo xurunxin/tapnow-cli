@@ -1,0 +1,9 @@
+node_modules/
+.research/
+.tapnow/
+*.tapnow-state.json
+*.tapnow-state.json.*
+.env*
+output/
+*.tgz
+playwright-report/

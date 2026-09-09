@@ -1,0 +1,6568 @@
+{
+  "observedAt": "2026-09-09T18:52:08.579Z",
+  "webVersion": "2.16.2",
+  "source": "https://app.tapnow.ai",
+  "models": [
+    {
+      "type": "image",
+      "model": "gpt-image-2.5-flare",
+      "provider": "openai",
+      "name": "imageModels.name.gptImage25Flare",
+      "description": "imageModels.descriptions.gptImage25Flare",
+      "duration": "1min",
+      "isNew": true,
+      "featureTags": [
+        {
+          "labelKey": "image.featureTag.resolution",
+          "labelParams": {
+            "value": "4K"
+          }
+        }
+      ],
+      "supportedModes": [
+        "text_to_image",
+        "image_to_image"
+      ],
+      "options": {
+        "aspectRatios": [
+          "auto",
+          "1:1",
+          "2:1",
+          "4:3",
+          "3:4",
+          "5:4",
+          "4:5",
+          "3:2",
+          "2:3",
+          "16:9",
+          "9:16",
+          "21:9",
+          "9:21"
+        ],
+        "maxImages": 16,
+        "qualityOptions": [
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
+      "defaults": {
+        "aspectRatio": "1:1",
+        "imageSize": "1K",
+        "quality": "low"
+      }
+    },
+    {
+      "type": "image",
+      "model": "gpt-image-2.5-sunburst",
+      "provider": "openai",
+      "name": "imageModels.name.gptImage25Sunburst",
+      "description": "imageModels.descriptions.gptImage25Sunburst",
+      "duration": "2min",
+      "isNew": true,
+      "featureTags": [
+        {
+          "labelKey": "image.featureTag.resolution",
+          "labelParams": {
+            "value": "4K"
+          }
+        }
+      ],
+      "supportedModes": [
+        "text_to_image",
+        "image_to_image"
+      ],
+      "options": {
+        "aspectRatios": [
+          "auto",
+          "1:1",
+          "2:1",
+          "4:3",
+          "3:4",
+          "5:4",
+          "4:5",
+          "3:2",
+          "2:3",
+          "16:9",
+          "9:16",
+          "21:9",
+          "9:21"
+        ],
+        "maxImages": 16,
+        "qualityOptions": [
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ]
+      },
+      "defaults": {
+        "aspectRatio": "1:1",
+        "imageSize": "1K",
+        "quality": "low"
+      }
+    },
+    {
+      "type": "image",
+      "model": "gpt-image-2",
+      "provider": "openai",
+      "name": "imageModels.name.gptImage2",
+      "description": "imageModels.descriptions.gptImage2",
+      "duration": "1min",
+      "badges": [
+        {
+          "labelKey": "imageModels.badges.hot"
+        }
+      ],
+      "featureTags": [
+        {
+          "labelKey": "image.featureTag.resolution",
+          "labelParams": {
+            "value": "4K"
+          }
+        }
+      ],
+      "supportedModes": [
+        "text_to_image",
+        "image_to_image"
+      ],
+      "options": {
+        "aspectRatios": [
+          "auto",
+          "1:1",
+          "2:1",
+          "4:3",
+          "3:4",
+          "5:4",
+          "4:5",
+          "3:2",
+          "2:3",
+          "16:9",
+          "9:16",
+          "21:9",
+          "9:21"
+        ],
+        "maxImages": 16,
+        "qualityOptions": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "defaults": {
+        "aspectRatio": "1:1",
+        "imageSize": "1K",
+        "quality": "low"
+      }
+    },
+    {
+      "type": "image",
+      "model": "nano-banana-flash",
+      "provider": "google",
+      "name": "imageModels.name.nano-banana-2-0",
+      "description": "imageModels.descriptions.nano-banana-2-0",
+      "duration": "1min",
+      "featureTags": [
+        {
+          "labelKey": "image.featureTag.resolution",
+          "labelParams": {
+            "value": "4K"
+          }
+        }
+      ],
+      "supportedModes": [
+        "text_to_image",
+        "image_to_image"
+      ],
+      "options": {
+        "aspectRatios": [
+          "Auto",
+          "1:1",
+          "9:16",
+          "16:9",
+          "3:4",
+          "4:3",
+          "3:2",
+          "2:3",
+          "5:4",
+          "4:5",
+          "21:9"
+        ],
+        "maxImages": 20,
+        "imageSizeOptions": [
+          "512P",
+          "1K",
+          "2K",
+          "4K"
+        ],
+        "thinkingLevelOptions": [
+          "MINIMAL",
+          "HIGH"
+        ]
+      },
+      "defaults": {
+        "aspectRatio": "Auto",
+        "imageSize": "1K",
+        "enableGoogleSearch": false,
+        "enable_image_search": false,
+        "thinking_level": "HIGH"
+      }
+    },
+    {
+      "type": "image",
+      "model": "nano-banana-flash-lite",
+      "provider": "google",
+      "name": "imageModels.name.nano-banana-flash-lite",
+      "description": "imageModels.descriptions.nano-banana-flash-lite",
+      "duration": "1min",
+      "isFree": true,
+      "isNew": true,
+      "featureTags": [
+        {
+          "labelKey": "image.featureTag.resolution",
+          "labelParams": {
+            "value": "1K"
+          }
+        }
+      ],
+      "supportedModes": [
+        "text_to_image",
+        "image_to_image"
+      ],
+      "options": {
+        "aspectRatios": [
+          "Auto",
+          "1:1",
+          "9:16",
+          "16:9",
+          "3:4",
+          "4:3",
+          "3:2",
+          "2:3",
+          "5:4",
+          "4:5",
+          "21:9"
+        ],
+        "maxImages": 20,
+        "imageSizeOptions": [
+          "1K"
+        ],
+        "thinkingLevelOptions": [
+          "MINIMAL",
+          "HIGH"
+        ]
+      },
+      "defaults": {
+        "aspectRatio": "Auto",
+        "imageSize": "1K",
+        "thinking_level": "HIGH"
+      }
+    },
+    {
+      "type": "image",
+      "model": "tamar-google-gemini-pro",
+      "provider": "google",
+      "name": "imageModels.name.gemini-banana-2",
+      "description": "imageModels.descriptions.gemini-banana-2",
+      "duration": "1min",
+      "featureTags": [
+        {
+          "labelKey": "image.featureTag.resolution",
+          "labelParams": {
+            "value": "4K"
+          }
+        }
+      ],
+      "supportedModes": [
+        "text_to_image",
+        "image_to_image"
+      ],
+      "options": {
+        "aspectRatios": [
+          "Auto",
+          "1:1",
+          "9:16",
+          "16:9",
+          "3:4",
+          "4:3",
+          "3:2",
+          "2:3",
+          "5:4",
+          "4:5",
+          "21:9"
+        ],
+        "maxImages": 20,
+        "imageSizeOptions": [
+          "1K",
+          "2K",
+          "4K"
+        ]
+      },
+      "defaults": {
+        "aspectRatio": "Auto",
+        "imageSize": "2K",
+        "enableGoogleSearch": false
+      }
+    },
+    {
+      "type": "image",
+      "model": "nano-banana",
+      "provider": "google",
+      "name": "imageModels.name.gemini-banana",
+      "description": "imageModels.descriptions.gemini-banana",
+      "duration": "1min",
+      "featureTags": [
+        {
+          "labelKey": "image.featureTag.resolution",
+          "labelParams": {
+            "value": "1080P"
+          }
+        }
+      ],
+      "supportedModes": [
+        "text_to_image",
+        "image_to_image"
+      ],
+      "options": {
+        "aspectRatios": [
+          "Auto",
+          "1:1",
+          "9:16",
+          "16:9",
+          "3:4",
+          "4:3",
+          "3:2",
+          "2:3",
+          "5:4",
+          "4:5",
+          "21:9"
+        ],
+        "maxImages": 20
+      },
+      "defaults": {
+        "aspectRatio": "Auto"
+      }
+    },
+    {
+      "type": "image",
+      "model": "reve-2.1",
+      "provider": "fal",
+      "name": "imageModels.name.reve21",
+      "description": "imageModels.descriptions.reve21",
+      "duration": "30s",
+      "isNew": true,
+      "supportedModes": [
+        "text_to_image"
+      ],
+      "options": {
+        "aspectRatios": [
+          "Auto",
+          "1:1",
+          "16:9",
+          "9:16",
+          "4:3",
+          "3:4",
+          "3:2",
+          "2:3",
+          "5:4",
+          "4:5",
+          "21:9",
+          "17:9",
+          "2:1",
+          "1:2",
+          "3:1",
+          "1:3",
+          "4:1",
+          "1:4"
+        ],
+        "batchSize": 1
+      },
+      "defaults": {
+        "aspectRatio": "Auto",
+        "outputFormat": "png"
+      }
+    },
+    {
+      "type": "image",
+      "model": "fal-recraft-v4",
+      "provider": "fal",
+      "name": "imageModels.name.falRecraftV4",
+      "description": "imageModels.descriptions.falRecraftV4",
+      "duration": "1min",
+      "featureTags": [
+        {
+          "labelKey": "image.featureTag.resolution",
+          "labelParams": {
+            "value": "1080P"
+          }
+        }
+      ],
+      "supportedModes": [
+        "text_to_image"
+      ],
+      "options": {
+        "aspectRatios": [
+          "1:1",
+          "4:3",
+          "3:4",
+          "16:9",
+          "9:16"
+        ],
+        "modes": [
+          "std",
+          "pro"
+        ]
+      },
+      "defaults": {
+        "aspectRatio": "1:1",
+        "generateMode": "std"
+      }
+    },
+    {
+      "type": "image",
+      "model": "fal-recraft-v4-vector",
+      "provider": "fal",
+      "name": "imageModels.name.falRecraftV4Vector",
+      "description": "imageModels.descriptions.falRecraftV4Vector",
+      "duration": "1min",
+      "featureTags": [
+        {
+          "labelKey": "image.featureTag.resolution",
+          "labelParams": {
+            "value": "1080P"
+          }
+        }
+      ],
+      "supportedModes": [
+        "text_to_image"
+      ],
+      "options": {
+        "aspectRatios": [
+          "1:1",
+          "4:3",
+          "3:4",
+          "16:9",
+          "9:16"
+        ],
+        "modes": [
+          "std",
+          "pro"
+        ]
+      },
+      "defaults": {
+        "aspectRatio": "1:1",
+        "generateMode": "std"
+      }
+    },
+    {
+      "type": "image",
+      "model": "doubao-seedream-5.0-lite",
+      "provider": "bytedance",
+      "name": "imageModels.name.seedream50lite",
+      "description": "imageModels.descriptions.seedream50lite",
+      "duration": "1min",
+      "isFree": true,
+      "featureTags": [
+        {
+          "labelKey": "image.featureTag.resolution",
+          "labelParams": {
+            "value": "2K"
+          }
+        }
+      ],
+      "supportedModes": [
+        "text_to_image",
+        "image_to_image"
+      ],
+      "options": {
+        "aspectRatios": [
+          "1:1",
+          "4:3",
+          "3:4",
+          "16:9",
+          "9:16",
+          "3:2",
+          "2:3",
+          "21:9"
+        ],
+        "maxImages": 14,
+        "imageSizeOptions": [
+          "2K",
+          "3K"
+        ]
+      },
+      "defaults": {
+        "aspectRatio": "1:1",
+        "imageSize": "2K"
+      }
+    },
+    {
+      "type": "image",
+      "model": "doubao-seedream-5.0-pro",
+      "provider": "bytedance",
+      "name": "imageModels.name.seedream50pro",
+      "description": "imageModels.descriptions.seedream50pro",
+      "duration": "1min",
+      "isFree": true,
+      "isNew": true,
+      "featureTags": [
+        {
+          "labelKey": "image.featureTag.resolution",
+          "labelParams": {
+            "value": "2K"
+          }
+        }
+      ],
+      "supportedModes": [
+        "text_to_image",
+        "image_to_image"
+      ],
+      "options": {
+        "aspectRatios": [
+          "1:1",
+          "4:3",
+          "3:4",
+          "16:9",
+          "9:16",
+          "3:2",
+          "2:3",
+          "21:9"
+        ],
+        "maxImages": 10,
+        "imageSizeOptions": [
+          "1K",
+          "2K"
+        ]
+      },
+      "defaults": {
+        "aspectRatio": "1:1",
+        "imageSize": "2K"
+      }
+    },
+    {
+      "type": "image",
+      "model": "tapnow-image-turbo",
+      "provider": "tapnow",
+      "name": "imageModels.name.tapnowImageTurbo",
+      "description": "imageModels.descriptions.tapnowImageTurbo",
+      "duration": "15s",
+      "isFree": false,
+      "isComingSoon": false,
+      "isHidden": true,
+      "featureTags": [
+        {
+          "labelKey": "image.featureTag.resolution",
+          "labelParams": {
+            "value": "4K"
+          }
+        }
+      ],
+      "supportedModes": [
+        "text_to_image"
+      ],
+      "options": {
+        "aspectRatios": [
+          "1:1",
+          "4:3",
+          "3:4",
+          "16:9",
+          "9:16"
+        ],
+        "imageSizeOptions": [
+          "1K",
+          "2K",
+          "4K"
+        ]
+      },
+      "defaults": {
+        "aspectRatio": "1:1",
+        "imageSize": "2K"
+      }
+    },
+    {
+      "type": "image",
+      "model": "grok-2-image",
+      "provider": "xai",
+      "name": "imageModels.name.grok2Image",
+      "description": "imageModels.descriptions.grok2Image",
+      "duration": "1min",
+      "isHidden": false,
+      "featureTags": [
+        {
+          "labelKey": "image.featureTag.resolution",
+          "labelParams": {
+            "value": "1080P"
+          }
+        }
+      ],
+      "supportedModes": [
+        "text_to_image"
+      ],
+      "options": {
+        "aspectRatios": [
+          "Auto"
+        ]
+      },
+      "defaults": {
+        "aspectRatio": "Auto"
+      }
+    },
+    {
+      "type": "image",
+      "model": "grok-imagine-image",
+      "provider": "xai",
+      "name": "imageModels.name.grokImagineImage",
+      "description": "imageModels.descriptions.grokImagineImage",
+      "duration": "1min",
+      "isNew": true,
+      "isHidden": false,
+      "featureTags": [
+        {
+          "labelKey": "image.featureTag.resolution",
+          "labelParams": {
+            "value": "2K"
+          }
+        }
+      ],
+      "supportedModes": [
+        "text_to_image",
+        "image_to_image"
+      ],
+      "options": {
+        "aspectRatios": [
+          "Auto",
+          "1:1",
+          "16:9",
+          "9:16",
+          "4:3",
+          "3:4",
+          "3:2",
+          "2:3",
+          "2:1",
+          "1:2",
+          "19.5:9",
+          "9:19.5",
+          "20:9",
+          "9:20"
+        ],
+        "imageSizeOptions": [
+          "1K",
+          "2K"
+        ],
+        "maxImages": 3
+      },
+      "defaults": {
+        "aspectRatio": "Auto",
+        "imageSize": "1K"
+      }
+    },
+    {
+      "type": "image",
+      "model": "grok-imagine-image-quality",
+      "provider": "xai",
+      "name": "imageModels.name.grokImagineImageQuality",
+      "description": "imageModels.descriptions.grokImagineImageQuality",
+      "duration": "1min",
+      "isNew": true,
+      "isHidden": false,
+      "featureTags": [
+        {
+          "labelKey": "image.featureTag.resolution",
+          "labelParams": {
+            "value": "2K"
+          }
+        }
+      ],
+      "supportedModes": [
+        "text_to_image",
+        "image_to_image"
+      ],
+      "options": {
+        "aspectRatios": [
+          "Auto",
+          "1:1",
+          "16:9",
+          "9:16",
+          "4:3",
+          "3:4",
+          "3:2",
+          "2:3",
+          "2:1",
+          "1:2",
+          "19.5:9",
+          "9:19.5",
+          "20:9",
+          "9:20"
+        ],
+        "imageSizeOptions": [
+          "1K",
+          "2K"
+        ],
+        "maxImages": 3
+      },
+      "defaults": {
+        "aspectRatio": "Auto",
+        "imageSize": "2K"
+      }
+    },
+    {
+      "type": "image",
+      "model": "doubao-seedream-4.0",
+      "provider": "bytedance",
+      "name": "imageModels.name.seedream",
+      "description": "imageModels.descriptions.seedream",
+      "duration": "1min",
+      "isFree": true,
+      "featureTags": [
+        {
+          "labelKey": "image.featureTag.resolution",
+          "labelParams": {
+            "value": "4K"
+          }
+        }
+      ],
+      "supportedModes": [
+        "text_to_image",
+        "image_to_image"
+      ],
+      "options": {
+        "aspectRatios": [
+          "Auto(4K)",
+          "1:1",
+          "4:3",
+          "3:4",
+          "16:9",
+          "9:16",
+          "3:2",
+          "2:3",
+          "21:9"
+        ],
+        "maxImages": 10
+      },
+      "defaults": {
+        "aspectRatio": "Auto(4K)",
+        "sequential_image_generation": "auto"
+      }
+    },
+    {
+      "type": "image",
+      "model": "doubao-seedream-4.5",
+      "provider": "bytedance",
+      "name": "imageModels.name.seedream45",
+      "description": "imageModels.descriptions.seedream45",
+      "duration": "1min",
+      "isFree": true,
+      "featureTags": [
+        {
+          "labelKey": "image.featureTag.resolution",
+          "labelParams": {
+            "value": "4K"
+          }
+        }
+      ],
+      "supportedModes": [
+        "text_to_image",
+        "image_to_image"
+      ],
+      "options": {
+        "aspectRatios": [
+          "1:1",
+          "4:3",
+          "3:4",
+          "16:9",
+          "9:16",
+          "3:2",
+          "2:3"
+        ],
+        "maxImages": 10,
+        "imageSizeOptions": [
+          "2K",
+          "4K"
+        ]
+      },
+      "defaults": {
+        "aspectRatio": "16:9",
+        "imageSize": "2K",
+        "sequential_image_generation": "auto"
+      }
+    },
+    {
+      "type": "image",
+      "model": "midjourney-v7",
+      "provider": "midjourney",
+      "name": "imageModels.name.midjourney",
+      "description": "imageModels.descriptions.midjourney",
+      "duration": "2min",
+      "isFree": false,
+      "featureTags": [
+        {
+          "labelKey": "image.featureTag.resolution",
+          "labelParams": {
+            "value": "1080P"
+          }
+        }
+      ],
+      "supportedModes": [
+        "text_to_image",
+        "image_to_image"
+      ],
+      "options": {
+        "aspectRatios": [
+          "1:1",
+          "16:9",
+          "9:16",
+          "4:3",
+          "3:4",
+          "2:3",
+          "3:2",
+          "7:4",
+          "4:7"
+        ],
+        "batchSize": 4,
+        "maxImages": 4
+      },
+      "defaults": {
+        "aspectRatio": "16:9"
+      }
+    },
+    {
+      "type": "image",
+      "model": "midjourney-v8.2",
+      "provider": "midjourney",
+      "name": "imageModels.name.midjourneyV82",
+      "description": "imageModels.descriptions.midjourneyV82",
+      "duration": "2min",
+      "isFree": false,
+      "isNew": true,
+      "featureTags": [
+        {
+          "labelKey": "image.featureTag.resolution",
+          "labelParams": {
+            "value": "2K"
+          }
+        }
+      ],
+      "supportedModes": [
+        "text_to_image",
+        "image_to_image"
+      ],
+      "options": {
+        "aspectRatios": [
+          "1:1",
+          "16:9",
+          "9:16",
+          "4:3",
+          "3:4",
+          "2:3",
+          "3:2",
+          "7:4",
+          "4:7"
+        ],
+        "batchSize": 4,
+        "maxImages": 4
+      },
+      "defaults": {
+        "aspectRatio": "16:9"
+      }
+    },
+    {
+      "type": "image",
+      "model": "midjourney-v8.1",
+      "provider": "midjourney",
+      "name": "imageModels.name.midjourneyV81",
+      "description": "imageModels.descriptions.midjourneyV81",
+      "duration": "2min",
+      "isFree": false,
+      "featureTags": [
+        {
+          "labelKey": "image.featureTag.resolution",
+          "labelParams": {
+            "value": "2K"
+          }
+        }
+      ],
+      "supportedModes": [
+        "text_to_image",
+        "image_to_image"
+      ],
+      "options": {
+        "aspectRatios": [
+          "1:1",
+          "16:9",
+          "9:16",
+          "4:3",
+          "3:4",
+          "2:3",
+          "3:2",
+          "7:4",
+          "4:7"
+        ],
+        "batchSize": 4,
+        "maxImages": 4
+      },
+      "defaults": {
+        "aspectRatio": "16:9"
+      }
+    },
+    {
+      "type": "image",
+      "model": "midjourney-niji7",
+      "provider": "midjourney",
+      "name": "imageModels.name.midjourneyNiji7",
+      "description": "imageModels.descriptions.midjourneyNiji7",
+      "duration": "2min",
+      "isFree": false,
+      "featureTags": [
+        {
+          "labelKey": "image.featureTag.resolution",
+          "labelParams": {
+            "value": "1080P"
+          }
+        }
+      ],
+      "supportedModes": [
+        "text_to_image",
+        "image_to_image"
+      ],
+      "options": {
+        "aspectRatios": [
+          "1:1",
+          "16:9",
+          "9:16",
+          "4:3",
+          "3:4",
+          "2:3",
+          "3:2",
+          "7:4",
+          "4:7"
+        ],
+        "batchSize": 4,
+        "maxImages": 4
+      },
+      "defaults": {
+        "aspectRatio": "16:9"
+      }
+    },
+    {
+      "type": "image",
+      "model": "gpt-image-1",
+      "provider": "openai",
+      "name": "imageModels.name.gptImage1",
+      "description": "imageModels.descriptions.gptImage1",
+      "duration": "1.5min",
+      "isHidden": true,
+      "supportedModes": [
+        "text_to_image",
+        "image_to_image"
+      ],
+      "options": {
+        "aspectRatios": [
+          "1:1",
+          "3:2",
+          "2:3"
+        ],
+        "maxImages": 4
+      },
+      "defaults": {
+        "aspectRatio": "1:1"
+      }
+    },
+    {
+      "type": "image",
+      "model": "imagen-4.0",
+      "provider": "google",
+      "name": "imageModels.name.imagen4",
+      "description": "imageModels.descriptions.imagen4",
+      "duration": "1min",
+      "supportedModes": [
+        "text_to_image"
+      ],
+      "isHidden": true,
+      "options": {
+        "aspectRatios": [
+          "1:1",
+          "16:9",
+          "9:16",
+          "4:3",
+          "3:4"
+        ]
+      },
+      "defaults": {
+        "aspectRatio": "1:1"
+      }
+    },
+    {
+      "type": "image",
+      "model": "flux-2-pro",
+      "provider": "bfl",
+      "name": "imageModels.name.flux2Pro",
+      "description": "imageModels.descriptions.flux2Pro",
+      "duration": "1min",
+      "isHidden": true,
+      "featureTags": [
+        {
+          "labelKey": "image.featureTag.resolution",
+          "labelParams": {
+            "value": "2K"
+          }
+        }
+      ],
+      "supportedModes": [
+        "text_to_image",
+        "image_to_image"
+      ],
+      "options": {
+        "aspectRatios": [
+          "1:1",
+          "4:3",
+          "3:4",
+          "16:9",
+          "9:16",
+          "3:2",
+          "2:3"
+        ],
+        "maxImages": 4,
+        "imageSizeOptions": [
+          "1K",
+          "2K"
+        ]
+      },
+      "defaults": {
+        "aspectRatio": "16:9",
+        "imageSize": "1K"
+      }
+    },
+    {
+      "type": "image",
+      "model": "flux-kontext-max",
+      "provider": "bfl",
+      "name": "imageModels.name.fluxMax",
+      "description": "imageModels.descriptions.fluxMax",
+      "duration": "2min",
+      "featureTags": [
+        {
+          "labelKey": "image.featureTag.resolution",
+          "labelParams": {
+            "value": "1080P"
+          }
+        }
+      ],
+      "supportedModes": [
+        "text_to_image",
+        "image_to_image"
+      ],
+      "options": {
+        "aspectRatios": [
+          "1:1",
+          "4:3",
+          "3:4",
+          "16:9",
+          "9:16"
+        ],
+        "maxImages": 4
+      },
+      "defaults": {
+        "aspectRatio": "16:9"
+      }
+    },
+    {
+      "type": "image",
+      "model": "flux-kontext-pro",
+      "provider": "bfl",
+      "name": "imageModels.name.flux",
+      "description": "imageModels.descriptions.flux",
+      "duration": "1min",
+      "featureTags": [
+        {
+          "labelKey": "image.featureTag.resolution",
+          "labelParams": {
+            "value": "1080P"
+          }
+        }
+      ],
+      "supportedModes": [
+        "text_to_image",
+        "image_to_image"
+      ],
+      "options": {
+        "aspectRatios": [
+          "1:1",
+          "4:3",
+          "3:4",
+          "16:9",
+          "9:16"
+        ],
+        "maxImages": 4
+      },
+      "defaults": {
+        "aspectRatio": "16:9"
+      }
+    },
+    {
+      "type": "image",
+      "model": "world-edit",
+      "provider": "tamar",
+      "name": "imageModels.name.tamar-world-edit",
+      "description": "imageModels.descriptions.tamar-world-edit",
+      "duration": "1min",
+      "isHidden": true,
+      "supportedModes": [
+        "image_to_image"
+      ],
+      "options": {
+        "aspectRatios": [
+          "Auto"
+        ],
+        "maxImages": 20,
+        "imageSizeOptions": [
+          "1K",
+          "2K",
+          "4K"
+        ]
+      },
+      "defaults": {
+        "aspectRatio": "Auto",
+        "imageSize": "2K"
+      }
+    },
+    {
+      "type": "image",
+      "model": "tamar-google-gemini-pro",
+      "provider": "google",
+      "name": "imageModels.name.gemini-banana-2",
+      "description": "imageModels.descriptions.gemini-banana-2",
+      "duration": "1min",
+      "featureTags": [
+        {
+          "labelKey": "image.featureTag.resolution",
+          "labelParams": {
+            "value": "4K"
+          }
+        }
+      ],
+      "supportedModes": [
+        "text_to_image",
+        "image_to_image"
+      ],
+      "options": {
+        "aspectRatios": [
+          "Auto",
+          "1:1",
+          "9:16",
+          "16:9",
+          "3:4",
+          "4:3",
+          "3:2",
+          "2:3",
+          "5:4",
+          "4:5",
+          "21:9"
+        ],
+        "maxImages": 20,
+        "imageSizeOptions": [
+          "1K",
+          "2K",
+          "4K"
+        ]
+      },
+      "defaults": {
+        "aspectRatio": "Auto",
+        "imageSize": "2K",
+        "enableGoogleSearch": false
+      },
+      "isHidden": true
+    },
+    {
+      "type": "video",
+      "model": "seedance-2.0",
+      "externalModelIds": [
+        "agent-video-generation-01",
+        "seedance-2"
+      ],
+      "provider": "tapnow",
+      "name": "videoModels.name.seedance20",
+      "description": "videoModels.descriptions.seedance20",
+      "duration": "5~10 min",
+      "referenceLabelKey": "videoConfigs.referenceOmni",
+      "featureTags": [
+        {
+          "labelKey": "video.featureTag.resolution",
+          "labelParams": {
+            "value": "1080P"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.duration",
+          "labelParams": {
+            "value": "4-15S"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.audio",
+          "iconOnly": true
+        }
+      ],
+      "variants": [
+        {
+          "key": "reference",
+          "modelType": "reference_to_video",
+          "aspectRatioPolicy": "optional",
+          "referenceImageRange": {
+            "min": 0,
+            "max": 9
+          },
+          "referenceVideoRange": {
+            "min": 0,
+            "max": 3
+          },
+          "referenceAudioRange": {
+            "min": 0,
+            "max": 3
+          },
+          "options": {
+            "aspectRatios": [
+              "16:9",
+              "4:3",
+              "1:1",
+              "3:4",
+              "9:16",
+              "21:9"
+            ],
+            "durations": [
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "resolutions": [
+              "480p",
+              "720p",
+              "1080p",
+              "4k"
+            ],
+            "supportsAudio": true,
+            "omniReference": true,
+            "timesOptions": [
+              1,
+              2
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "duration": 5,
+            "resolution": "720p",
+            "generateAudio": true
+          }
+        },
+        {
+          "key": "text",
+          "modelType": "text_to_video",
+          "aspectRatioPolicy": "required",
+          "options": {
+            "aspectRatios": [
+              "16:9",
+              "4:3",
+              "1:1",
+              "3:4",
+              "9:16",
+              "21:9"
+            ],
+            "durations": [
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "resolutions": [
+              "480p",
+              "720p",
+              "1080p",
+              "4k"
+            ],
+            "supportsAudio": true,
+            "omniReference": true,
+            "timesOptions": [
+              1,
+              2
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "duration": 5,
+            "resolution": "720p",
+            "generateAudio": true
+          }
+        },
+        {
+          "key": "image",
+          "modelType": "image_to_video",
+          "aspectRatioPolicy": "derived_from_reference",
+          "options": {
+            "durations": [
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "resolutions": [
+              "480p",
+              "720p",
+              "1080p",
+              "4k"
+            ],
+            "supportsAudio": true,
+            "omniReference": true,
+            "timesOptions": [
+              1,
+              2
+            ]
+          },
+          "defaults": {
+            "duration": 5,
+            "resolution": "720p",
+            "generateAudio": true
+          }
+        },
+        {
+          "key": "start_end",
+          "modelType": "start_end_to_video",
+          "aspectRatioPolicy": "derived_from_reference",
+          "options": {
+            "durations": [
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "resolutions": [
+              "480p",
+              "720p",
+              "1080p",
+              "4k"
+            ],
+            "supportsAudio": true,
+            "omniReference": true,
+            "timesOptions": [
+              1,
+              2
+            ]
+          },
+          "defaults": {
+            "duration": 5,
+            "resolution": "720p",
+            "generateAudio": true
+          }
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "model": "seedance-2.0-mini",
+      "externalModelIds": [
+        "agent-video-generation-01-mini",
+        "seedance-2-mini"
+      ],
+      "provider": "tapnow",
+      "name": "videoModels.name.seedance20Mini",
+      "description": "videoModels.descriptions.seedance20Mini",
+      "duration": "2~5 min",
+      "isFree": true,
+      "referenceLabelKey": "videoConfigs.referenceOmni",
+      "featureTags": [
+        {
+          "labelKey": "video.featureTag.resolution",
+          "labelParams": {
+            "value": "720P"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.duration",
+          "labelParams": {
+            "value": "4-15S"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.audio",
+          "iconOnly": true
+        }
+      ],
+      "variants": [
+        {
+          "key": "reference",
+          "modelType": "reference_to_video",
+          "aspectRatioPolicy": "optional",
+          "referenceImageRange": {
+            "min": 0,
+            "max": 9
+          },
+          "referenceVideoRange": {
+            "min": 0,
+            "max": 3
+          },
+          "referenceAudioRange": {
+            "min": 0,
+            "max": 3
+          },
+          "options": {
+            "aspectRatios": [
+              "16:9",
+              "4:3",
+              "1:1",
+              "3:4",
+              "9:16",
+              "21:9"
+            ],
+            "durations": [
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "resolutions": [
+              "480p",
+              "720p"
+            ],
+            "supportsAudio": true,
+            "omniReference": true,
+            "timesOptions": [
+              1,
+              2
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "duration": 5,
+            "resolution": "480p",
+            "generateAudio": true
+          }
+        },
+        {
+          "key": "text",
+          "modelType": "text_to_video",
+          "aspectRatioPolicy": "required",
+          "options": {
+            "aspectRatios": [
+              "16:9",
+              "4:3",
+              "1:1",
+              "3:4",
+              "9:16",
+              "21:9"
+            ],
+            "durations": [
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "resolutions": [
+              "480p",
+              "720p"
+            ],
+            "supportsAudio": true,
+            "omniReference": true,
+            "timesOptions": [
+              1,
+              2
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "duration": 5,
+            "resolution": "480p",
+            "generateAudio": true
+          }
+        },
+        {
+          "key": "image",
+          "modelType": "image_to_video",
+          "aspectRatioPolicy": "derived_from_reference",
+          "options": {
+            "durations": [
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "resolutions": [
+              "480p",
+              "720p"
+            ],
+            "supportsAudio": true,
+            "omniReference": true,
+            "timesOptions": [
+              1,
+              2
+            ]
+          },
+          "defaults": {
+            "duration": 5,
+            "resolution": "480p",
+            "generateAudio": true
+          }
+        },
+        {
+          "key": "start_end",
+          "modelType": "start_end_to_video",
+          "aspectRatioPolicy": "derived_from_reference",
+          "options": {
+            "durations": [
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "resolutions": [
+              "480p",
+              "720p"
+            ],
+            "supportsAudio": true,
+            "omniReference": true,
+            "timesOptions": [
+              1,
+              2
+            ]
+          },
+          "defaults": {
+            "duration": 5,
+            "resolution": "480p",
+            "generateAudio": true
+          }
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "model": "seedance-2.0-fast",
+      "externalModelIds": [
+        "agent-video-generation-01-fast",
+        "seedance-2-fast"
+      ],
+      "provider": "tapnow",
+      "name": "videoModels.name.seedance20Fast",
+      "description": "videoModels.descriptions.seedance20Fast",
+      "duration": "2~5 min",
+      "referenceLabelKey": "videoConfigs.referenceOmni",
+      "featureTags": [
+        {
+          "labelKey": "video.featureTag.resolution",
+          "labelParams": {
+            "value": "720P"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.duration",
+          "labelParams": {
+            "value": "4-15S"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.audio",
+          "iconOnly": true
+        }
+      ],
+      "variants": [
+        {
+          "key": "reference",
+          "modelType": "reference_to_video",
+          "aspectRatioPolicy": "optional",
+          "referenceImageRange": {
+            "min": 0,
+            "max": 9
+          },
+          "referenceVideoRange": {
+            "min": 0,
+            "max": 3
+          },
+          "referenceAudioRange": {
+            "min": 0,
+            "max": 3
+          },
+          "options": {
+            "aspectRatios": [
+              "16:9",
+              "4:3",
+              "1:1",
+              "3:4",
+              "9:16",
+              "21:9"
+            ],
+            "durations": [
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "resolutions": [
+              "480p",
+              "720p"
+            ],
+            "supportsAudio": true,
+            "omniReference": true,
+            "timesOptions": [
+              1,
+              2
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "duration": 5,
+            "resolution": "720p",
+            "generateAudio": true
+          }
+        },
+        {
+          "key": "text",
+          "modelType": "text_to_video",
+          "aspectRatioPolicy": "required",
+          "options": {
+            "aspectRatios": [
+              "16:9",
+              "4:3",
+              "1:1",
+              "3:4",
+              "9:16",
+              "21:9"
+            ],
+            "durations": [
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "resolutions": [
+              "480p",
+              "720p"
+            ],
+            "supportsAudio": true,
+            "omniReference": true,
+            "timesOptions": [
+              1,
+              2
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "duration": 5,
+            "resolution": "720p",
+            "generateAudio": true
+          }
+        },
+        {
+          "key": "image",
+          "modelType": "image_to_video",
+          "aspectRatioPolicy": "derived_from_reference",
+          "options": {
+            "durations": [
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "resolutions": [
+              "480p",
+              "720p"
+            ],
+            "supportsAudio": true,
+            "omniReference": true,
+            "timesOptions": [
+              1,
+              2
+            ]
+          },
+          "defaults": {
+            "duration": 5,
+            "resolution": "720p",
+            "generateAudio": true
+          }
+        },
+        {
+          "key": "start_end",
+          "modelType": "start_end_to_video",
+          "aspectRatioPolicy": "derived_from_reference",
+          "options": {
+            "durations": [
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "resolutions": [
+              "480p",
+              "720p"
+            ],
+            "supportsAudio": true,
+            "omniReference": true,
+            "timesOptions": [
+              1,
+              2
+            ]
+          },
+          "defaults": {
+            "duration": 5,
+            "resolution": "720p",
+            "generateAudio": true
+          }
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "model": "seedance-2.5",
+      "externalModelIds": [
+        "agent-video-generation-02",
+        "seedance_2_5"
+      ],
+      "provider": "tapnow",
+      "name": "videoModels.name.seedance25",
+      "description": "videoModels.descriptions.seedance25",
+      "duration": "5~10 min",
+      "referenceLabelKey": "videoConfigs.referenceOmni",
+      "isNew": true,
+      "featureTags": [
+        {
+          "labelKey": "video.featureTag.resolution",
+          "labelParams": {
+            "value": "1080P"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.duration",
+          "labelParams": {
+            "value": "4-30S"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.audio",
+          "iconOnly": true
+        }
+      ],
+      "variants": [
+        {
+          "key": "reference",
+          "modelType": "reference_to_video",
+          "aspectRatioPolicy": "optional",
+          "referenceImageRange": {
+            "min": 0,
+            "max": 30
+          },
+          "referenceVideoRange": {
+            "min": 0,
+            "max": 10
+          },
+          "referenceAudioRange": {
+            "min": 0,
+            "max": 10
+          },
+          "referenceVideoDurationRange": {
+            "min": 2,
+            "max": 30,
+            "totalMax": 30,
+            "maxTolerance": 0.2
+          },
+          "options": {
+            "aspectRatios": [
+              "adaptive",
+              "16:9",
+              "4:3",
+              "1:1",
+              "3:4",
+              "9:16",
+              "21:9"
+            ],
+            "durations": [
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30
+            ],
+            "resolutions": [
+              "480p",
+              "720p",
+              "1080p"
+            ],
+            "supportsAudio": true,
+            "omniReference": true,
+            "timesOptions": [
+              1,
+              2
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "adaptive",
+            "duration": 5,
+            "resolution": "720p",
+            "generateAudio": true
+          }
+        },
+        {
+          "key": "edit",
+          "modelType": "video_edit",
+          "aspectRatioPolicy": "forbidden",
+          "referenceImageRange": {
+            "min": 0,
+            "max": 30
+          },
+          "referenceVideoRange": {
+            "min": 1,
+            "max": 1
+          },
+          "referenceAudioRange": {
+            "min": 0,
+            "max": 10
+          },
+          "referenceVideoDurationRange": {
+            "min": 4,
+            "max": 30,
+            "maxTolerance": 0.2
+          },
+          "options": {
+            "resolutions": [
+              "480p",
+              "720p",
+              "1080p"
+            ],
+            "supportsAudio": true,
+            "omniReference": true,
+            "timesOptions": [
+              1,
+              2
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "adaptive",
+            "duration": -1,
+            "resolution": "720p",
+            "generateAudio": true
+          }
+        },
+        {
+          "key": "text",
+          "modelType": "text_to_video",
+          "aspectRatioPolicy": "required",
+          "options": {
+            "aspectRatios": [
+              "adaptive",
+              "16:9",
+              "4:3",
+              "1:1",
+              "3:4",
+              "9:16",
+              "21:9"
+            ],
+            "durations": [
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30
+            ],
+            "resolutions": [
+              "480p",
+              "720p",
+              "1080p"
+            ],
+            "supportsAudio": true,
+            "omniReference": true,
+            "timesOptions": [
+              1,
+              2
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "adaptive",
+            "duration": 5,
+            "resolution": "720p",
+            "generateAudio": true
+          }
+        },
+        {
+          "key": "image",
+          "modelType": "image_to_video",
+          "aspectRatioPolicy": "derived_from_reference",
+          "options": {
+            "durations": [
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30
+            ],
+            "resolutions": [
+              "480p",
+              "720p",
+              "1080p"
+            ],
+            "supportsAudio": true,
+            "omniReference": true,
+            "timesOptions": [
+              1,
+              2
+            ]
+          },
+          "defaults": {
+            "duration": 5,
+            "resolution": "720p",
+            "generateAudio": true
+          }
+        },
+        {
+          "key": "start_end",
+          "modelType": "start_end_to_video",
+          "aspectRatioPolicy": "derived_from_reference",
+          "options": {
+            "durations": [
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30
+            ],
+            "resolutions": [
+              "480p",
+              "720p",
+              "1080p"
+            ],
+            "supportsAudio": true,
+            "omniReference": true,
+            "timesOptions": [
+              1,
+              2
+            ]
+          },
+          "defaults": {
+            "duration": 5,
+            "resolution": "720p",
+            "generateAudio": true
+          }
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "model": "MiniMax-H3",
+      "externalModelIds": [
+        "minimax_h3",
+        "minimax-h3"
+      ],
+      "provider": "minimax",
+      "name": "videoModels.name.minimaxH3",
+      "description": "videoModels.descriptions.minimaxH3",
+      "duration": "3 min",
+      "isNew": true,
+      "featureTags": [
+        {
+          "labelKey": "video.featureTag.resolution",
+          "labelParams": {
+            "value": "2K"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.duration",
+          "labelParams": {
+            "value": "4-15S"
+          }
+        }
+      ],
+      "variants": [
+        {
+          "key": "text",
+          "modelType": "text_to_video",
+          "aspectRatioPolicy": "required",
+          "options": {
+            "aspectRatios": [
+              "21:9",
+              "16:9",
+              "4:3",
+              "1:1",
+              "3:4",
+              "9:16"
+            ],
+            "durations": [
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "resolutions": [
+              "768P",
+              "2K"
+            ],
+            "omniReference": true
+          },
+          "defaults": {
+            "duration": 5,
+            "resolution": "2K",
+            "aspectRatio": "16:9"
+          }
+        },
+        {
+          "key": "image",
+          "modelType": "image_to_video",
+          "aspectRatioPolicy": "derived_from_reference",
+          "options": {
+            "durations": [
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "resolutions": [
+              "768P",
+              "2K"
+            ]
+          },
+          "defaults": {
+            "duration": 5,
+            "resolution": "2K"
+          }
+        },
+        {
+          "key": "start_end",
+          "modelType": "start_end_to_video",
+          "aspectRatioPolicy": "derived_from_reference",
+          "options": {
+            "durations": [
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "resolutions": [
+              "768P",
+              "2K"
+            ]
+          },
+          "defaults": {
+            "duration": 5,
+            "resolution": "2K"
+          }
+        },
+        {
+          "key": "reference",
+          "modelType": "reference_to_video",
+          "aspectRatioPolicy": "optional",
+          "referenceImageRange": {
+            "min": 0,
+            "max": 9
+          },
+          "referenceVideoRange": {
+            "min": 0,
+            "max": 3
+          },
+          "referenceAudioRange": {
+            "min": 0,
+            "max": 3
+          },
+          "referenceVideoDurationRange": {
+            "min": 2,
+            "max": 15,
+            "totalMax": 15
+          },
+          "referenceAudioRequiresCompanion": true,
+          "options": {
+            "aspectRatios": [
+              "21:9",
+              "16:9",
+              "4:3",
+              "1:1",
+              "3:4",
+              "9:16"
+            ],
+            "durations": [
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "resolutions": [
+              "768P",
+              "2K"
+            ]
+          },
+          "defaults": {
+            "duration": 5,
+            "resolution": "2K",
+            "aspectRatio": "16:9"
+          }
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "model": "MiniMax-H3-Max",
+      "externalModelIds": [
+        "minimax_h3_max",
+        "minimax-h3-max"
+      ],
+      "provider": "minimax",
+      "name": "videoModels.name.minimaxH3Max",
+      "description": "videoModels.descriptions.minimaxH3Max",
+      "duration": "3 min",
+      "isNew": true,
+      "featureTags": [
+        {
+          "labelKey": "video.featureTag.resolution",
+          "labelParams": {
+            "value": "768P"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.duration",
+          "labelParams": {
+            "value": "5-15S"
+          }
+        }
+      ],
+      "variants": [
+        {
+          "key": "text",
+          "modelType": "text_to_video",
+          "aspectRatioPolicy": "required",
+          "options": {
+            "aspectRatios": [
+              "21:9",
+              "16:9",
+              "4:3",
+              "1:1",
+              "3:4",
+              "9:16"
+            ],
+            "durations": [
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "resolutions": [
+              "480P",
+              "768P"
+            ]
+          },
+          "defaults": {
+            "duration": 5,
+            "resolution": "768P",
+            "aspectRatio": "16:9"
+          }
+        },
+        {
+          "key": "image",
+          "modelType": "image_to_video",
+          "aspectRatioPolicy": "derived_from_reference",
+          "options": {
+            "durations": [
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "resolutions": [
+              "480P",
+              "768P"
+            ]
+          },
+          "defaults": {
+            "duration": 5,
+            "resolution": "768P"
+          }
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "model": "wan3.0-video",
+      "provider": "wanxiang",
+      "name": "videoModels.name.wan30",
+      "description": "videoModels.descriptions.wan30",
+      "duration": "2~5 min",
+      "isNew": true,
+      "discount": {
+        "rate": 0.3
+      },
+      "autoDurationEstimateSeconds": 15,
+      "featureTags": [
+        {
+          "labelKey": "video.featureTag.resolution",
+          "labelParams": {
+            "value": "1080P"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.duration",
+          "labelParams": {
+            "value": "2-30S"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.audio",
+          "iconOnly": true
+        }
+      ],
+      "variants": [
+        {
+          "key": "t2v",
+          "modelType": "text_to_video",
+          "aspectRatioPolicy": "required",
+          "options": {
+            "aspectRatios": [
+              "adaptive",
+              "16:9",
+              "9:16",
+              "1:1",
+              "4:3",
+              "3:4"
+            ],
+            "resolutions": [
+              "480P",
+              "720P",
+              "1080P"
+            ],
+            "durations": [
+              -1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30
+            ],
+            "supportsAudio": true,
+            "supportsTurbo": true
+          },
+          "defaults": {
+            "aspectRatio": "adaptive",
+            "resolution": "1080P",
+            "duration": 5,
+            "generateAudio": true,
+            "turbo": false
+          }
+        },
+        {
+          "key": "i2v",
+          "modelType": "image_to_video",
+          "aspectRatioPolicy": "derived_from_reference",
+          "options": {
+            "resolutions": [
+              "480P",
+              "720P",
+              "1080P"
+            ],
+            "durations": [
+              -1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30
+            ],
+            "supportsAudio": true,
+            "supportsTurbo": true
+          },
+          "defaults": {
+            "resolution": "1080P",
+            "duration": 5,
+            "generateAudio": true,
+            "turbo": false
+          }
+        },
+        {
+          "key": "ref",
+          "modelType": "reference_to_video",
+          "aspectRatioPolicy": "required",
+          "referenceImageRange": {
+            "min": 1,
+            "max": 10
+          },
+          "options": {
+            "aspectRatios": [
+              "adaptive",
+              "16:9",
+              "9:16",
+              "1:1",
+              "4:3",
+              "3:4"
+            ],
+            "resolutions": [
+              "480P",
+              "720P",
+              "1080P"
+            ],
+            "durations": [
+              -1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30
+            ],
+            "supportsAudio": true,
+            "supportsTurbo": true
+          },
+          "defaults": {
+            "aspectRatio": "adaptive",
+            "resolution": "1080P",
+            "duration": 5,
+            "generateAudio": true,
+            "turbo": false
+          }
+        },
+        {
+          "key": "v2v",
+          "modelType": "reference_video_to_video",
+          "aspectRatioPolicy": "required",
+          "referenceVideoRange": {
+            "min": 1,
+            "max": 5
+          },
+          "referenceImageRange": {
+            "min": 0,
+            "max": 10
+          },
+          "referenceVideoDurationRange": {
+            "min": 1,
+            "max": 15,
+            "totalMax": 15,
+            "maxTolerance": 0.2
+          },
+          "options": {
+            "aspectRatios": [
+              "adaptive",
+              "16:9",
+              "9:16",
+              "1:1",
+              "4:3",
+              "3:4"
+            ],
+            "resolutions": [
+              "480P",
+              "720P",
+              "1080P"
+            ],
+            "durations": [
+              -1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30
+            ],
+            "supportsAudio": true,
+            "supportsTurbo": true
+          },
+          "defaults": {
+            "aspectRatio": "adaptive",
+            "resolution": "1080P",
+            "duration": 5,
+            "generateAudio": true,
+            "turbo": false
+          }
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "model": "kling-video-o3",
+      "externalModelIds": [
+        "kling-v3-omni-official",
+        "kling-v3-omni"
+      ],
+      "provider": "kling",
+      "name": "videoModels.name.klingVideoO3",
+      "description": "videoModels.descriptions.klingVideoO3",
+      "duration": "2 min",
+      "referenceLabelKey": "videoConfigs.referenceOmni",
+      "featureTags": [
+        {
+          "labelKey": "video.featureTag.resolution",
+          "labelParams": {
+            "value": "4K"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.duration",
+          "labelParams": {
+            "value": "3-15S"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.audio",
+          "iconOnly": true
+        }
+      ],
+      "variants": [
+        {
+          "key": "t2v",
+          "modelType": "text_to_video",
+          "aspectRatioPolicy": "required",
+          "options": {
+            "durations": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "aspectRatios": [
+              "16:9",
+              "9:16",
+              "1:1"
+            ],
+            "supportElements": true,
+            "maxElementSlots": 3,
+            "supportsAudio": true,
+            "modes": [
+              "std",
+              "pro",
+              "4k"
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "duration": 8,
+            "generateAudio": true,
+            "generateMode": "pro"
+          }
+        },
+        {
+          "key": "i2v",
+          "modelType": "image_to_video",
+          "aspectRatioPolicy": "required",
+          "options": {
+            "durations": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "supportElements": true,
+            "maxElementSlots": 3,
+            "supportsAudio": true,
+            "modes": [
+              "std",
+              "pro",
+              "4k"
+            ]
+          },
+          "defaults": {
+            "duration": 8,
+            "generateAudio": true,
+            "generateMode": "pro"
+          }
+        },
+        {
+          "key": "start_end",
+          "modelType": "start_end_to_video",
+          "aspectRatioPolicy": "derived_from_reference",
+          "options": {
+            "durations": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "supportElements": true,
+            "maxElementSlots": 3,
+            "supportsAudio": true,
+            "modes": [
+              "std",
+              "pro",
+              "4k"
+            ]
+          },
+          "defaults": {
+            "duration": 8,
+            "generateAudio": true,
+            "generateMode": "pro"
+          }
+        },
+        {
+          "key": "ref_to_video",
+          "modelType": "reference_to_video",
+          "aspectRatioPolicy": "required",
+          "referenceImageRange": {
+            "min": 1,
+            "max": 7
+          },
+          "options": {
+            "durations": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "aspectRatios": [
+              "16:9",
+              "9:16",
+              "1:1"
+            ],
+            "supportElements": true,
+            "supportsAudio": true,
+            "modes": [
+              "std",
+              "pro",
+              "4k"
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "duration": 8,
+            "generateAudio": true,
+            "generateMode": "pro"
+          }
+        },
+        {
+          "key": "video-reference",
+          "modelType": "reference_video_to_video",
+          "aspectRatioPolicy": "required",
+          "referenceImageRange": {
+            "min": 0,
+            "max": 4
+          },
+          "referenceVideoRange": {
+            "min": 1,
+            "max": 1
+          },
+          "options": {
+            "durations": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "supportElements": true,
+            "aspectRatios": [
+              "16:9",
+              "9:16",
+              "1:1"
+            ],
+            "modes": [
+              "std",
+              "pro"
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "duration": 8,
+            "generateMode": "pro"
+          }
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "model": "flux-3",
+      "provider": "bfl",
+      "name": "videoModels.name.flux3",
+      "description": "videoModels.descriptions.flux3",
+      "duration": "2~5 min",
+      "isNew": true,
+      "featureTags": [
+        {
+          "labelKey": "video.featureTag.resolution",
+          "labelParams": {
+            "value": "1080P"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.duration",
+          "labelParams": {
+            "value": "5-20S"
+          }
+        }
+      ],
+      "variants": [
+        {
+          "key": "text",
+          "modelType": "text_to_video",
+          "options": {
+            "aspectRatios": [
+              "21:9",
+              "2:1",
+              "16:9",
+              "4:3",
+              "1:1",
+              "3:4",
+              "9:16"
+            ],
+            "durations": [
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ],
+            "resolutions": [
+              "720p",
+              "1080p"
+            ],
+            "supportsAudio": true
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "resolution": "720p",
+            "duration": 5,
+            "generateAudio": true
+          }
+        },
+        {
+          "key": "image",
+          "modelType": "image_to_video",
+          "options": {
+            "durations": [
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ],
+            "resolutions": [
+              "720p",
+              "1080p"
+            ],
+            "supportsAudio": true
+          },
+          "defaults": {
+            "resolution": "720p",
+            "duration": 5,
+            "generateAudio": true
+          }
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "model": "gemini-omni-flash",
+      "provider": "google",
+      "name": "videoModels.name.geminiOmniFlash",
+      "description": "videoModels.descriptions.geminiOmniFlash",
+      "duration": "1 min",
+      "pricePerSecondUnit": true,
+      "isNew": true,
+      "isComingSoon": false,
+      "featureTags": [
+        {
+          "labelKey": "video.featureTag.duration",
+          "labelParams": {
+            "value": "3-10S"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.audio",
+          "iconOnly": true
+        }
+      ],
+      "variants": [
+        {
+          "key": "text",
+          "modelType": "text_to_video",
+          "aspectRatioPolicy": "required",
+          "options": {
+            "aspectRatios": [
+              "16:9",
+              "9:16"
+            ],
+            "durations": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "duration": 10
+          }
+        },
+        {
+          "key": "image",
+          "modelType": "image_to_video",
+          "aspectRatioPolicy": "optional",
+          "options": {
+            "aspectRatios": [
+              "16:9",
+              "9:16"
+            ],
+            "durations": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "duration": 10
+          }
+        },
+        {
+          "key": "edit",
+          "modelType": "video_edit",
+          "referenceImageRange": {
+            "min": 0,
+            "max": 0
+          },
+          "referenceVideoRange": {
+            "min": 1,
+            "max": 1
+          },
+          "aspectRatioPolicy": "forbidden",
+          "options": {},
+          "defaults": {}
+        },
+        {
+          "key": "reference",
+          "modelType": "reference_to_video",
+          "aspectRatioPolicy": "optional",
+          "referenceImageRange": {
+            "min": 1,
+            "max": 3
+          },
+          "referenceVideoRange": {
+            "min": 0,
+            "max": 1
+          },
+          "options": {
+            "aspectRatios": [
+              "16:9",
+              "9:16"
+            ],
+            "durations": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "duration": 10
+          }
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "model": "gemini-omni-1.1-flash",
+      "provider": "google",
+      "name": "videoModels.name.geminiOmni11Flash",
+      "description": "videoModels.descriptions.geminiOmni11Flash",
+      "duration": "1 min",
+      "pricePerSecondUnit": true,
+      "isNew": true,
+      "isComingSoon": false,
+      "featureTags": [
+        {
+          "labelKey": "video.featureTag.duration",
+          "labelParams": {
+            "value": "3-10S"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.audio",
+          "iconOnly": true
+        }
+      ],
+      "variants": [
+        {
+          "key": "text",
+          "modelType": "text_to_video",
+          "aspectRatioPolicy": "required",
+          "options": {
+            "aspectRatios": [
+              "16:9",
+              "9:16"
+            ],
+            "durations": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "duration": 10
+          }
+        },
+        {
+          "key": "image",
+          "modelType": "image_to_video",
+          "aspectRatioPolicy": "optional",
+          "options": {
+            "aspectRatios": [
+              "16:9",
+              "9:16"
+            ],
+            "durations": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "duration": 10
+          }
+        },
+        {
+          "key": "edit",
+          "modelType": "video_edit",
+          "referenceImageRange": {
+            "min": 0,
+            "max": 0
+          },
+          "referenceVideoRange": {
+            "min": 1,
+            "max": 1
+          },
+          "aspectRatioPolicy": "forbidden",
+          "options": {},
+          "defaults": {}
+        },
+        {
+          "key": "reference",
+          "modelType": "reference_to_video",
+          "aspectRatioPolicy": "optional",
+          "referenceImageRange": {
+            "min": 1,
+            "max": 3
+          },
+          "referenceVideoRange": {
+            "min": 0,
+            "max": 1
+          },
+          "options": {
+            "aspectRatios": [
+              "16:9",
+              "9:16"
+            ],
+            "durations": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "duration": 10
+          }
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "model": "kling-v3-pro",
+      "provider": "kling",
+      "name": "videoModels.name.klingV3Pro",
+      "description": "videoModels.descriptions.klingV3Pro",
+      "duration": "2 min",
+      "featureTags": [
+        {
+          "labelKey": "video.featureTag.resolution",
+          "labelParams": {
+            "value": "4K"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.duration",
+          "labelParams": {
+            "value": "3-15S"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.audio",
+          "iconOnly": true
+        }
+      ],
+      "variants": [
+        {
+          "key": "t2v",
+          "modelType": "text_to_video",
+          "options": {
+            "durations": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "aspectRatios": [
+              "16:9",
+              "9:16",
+              "1:1"
+            ],
+            "supportElements": true,
+            "maxElementSlots": 3,
+            "supportsAudio": true,
+            "modes": [
+              "std",
+              "pro",
+              "4k"
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "duration": 8,
+            "generateAudio": true,
+            "generateMode": "pro"
+          }
+        },
+        {
+          "key": "i2v",
+          "modelType": "image_to_video",
+          "options": {
+            "durations": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "supportElements": true,
+            "maxElementSlots": 3,
+            "supportsAudio": true,
+            "modes": [
+              "std",
+              "pro",
+              "4k"
+            ]
+          },
+          "defaults": {
+            "duration": 8,
+            "generateAudio": true,
+            "generateMode": "pro"
+          }
+        },
+        {
+          "key": "start_end",
+          "modelType": "start_end_to_video",
+          "options": {
+            "durations": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "supportElements": true,
+            "maxElementSlots": 3,
+            "supportsAudio": true,
+            "modes": [
+              "std",
+              "pro",
+              "4k"
+            ]
+          },
+          "defaults": {
+            "duration": 8,
+            "generateAudio": true,
+            "generateMode": "pro"
+          }
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "model": "happyhorse-1.0",
+      "provider": "alibaba",
+      "name": "videoModels.name.happyhorse10",
+      "description": "videoModels.descriptions.happyhorse10",
+      "duration": "2~5 min",
+      "featureTags": [
+        {
+          "labelKey": "video.featureTag.resolution",
+          "labelParams": {
+            "value": "1080P"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.duration",
+          "labelParams": {
+            "value": "3-15S"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.audio",
+          "iconOnly": true
+        }
+      ],
+      "variants": [
+        {
+          "key": "t2v",
+          "modelType": "text_to_video",
+          "aspectRatioPolicy": "required",
+          "options": {
+            "aspectRatios": [
+              "16:9",
+              "9:16",
+              "1:1",
+              "4:3",
+              "3:4"
+            ],
+            "resolutions": [
+              "720P",
+              "1080P"
+            ],
+            "durations": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "resolution": "1080P",
+            "duration": 5
+          }
+        },
+        {
+          "key": "i2v",
+          "modelType": "image_to_video",
+          "aspectRatioPolicy": "derived_from_reference",
+          "options": {
+            "resolutions": [
+              "720P",
+              "1080P"
+            ],
+            "durations": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ]
+          },
+          "defaults": {
+            "resolution": "1080P",
+            "duration": 5
+          }
+        },
+        {
+          "key": "ref",
+          "modelType": "reference_to_video",
+          "aspectRatioPolicy": "required",
+          "referenceImageRange": {
+            "min": 1,
+            "max": 9
+          },
+          "options": {
+            "aspectRatios": [
+              "16:9",
+              "9:16",
+              "1:1",
+              "4:3",
+              "3:4"
+            ],
+            "resolutions": [
+              "720P",
+              "1080P"
+            ],
+            "durations": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "resolution": "1080P",
+            "duration": 5
+          }
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "model": "happyhorse-1.1",
+      "provider": "alibaba",
+      "name": "videoModels.name.happyhorse11",
+      "description": "videoModels.descriptions.happyhorse11",
+      "duration": "2~5 min",
+      "isNew": true,
+      "featureTags": [
+        {
+          "labelKey": "video.featureTag.resolution",
+          "labelParams": {
+            "value": "1080P"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.duration",
+          "labelParams": {
+            "value": "3-15S"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.audio",
+          "iconOnly": true
+        }
+      ],
+      "variants": [
+        {
+          "key": "t2v",
+          "modelType": "text_to_video",
+          "aspectRatioPolicy": "required",
+          "options": {
+            "aspectRatios": [
+              "16:9",
+              "9:16",
+              "1:1",
+              "4:3",
+              "3:4"
+            ],
+            "resolutions": [
+              "720P",
+              "1080P"
+            ],
+            "durations": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "resolution": "1080P",
+            "duration": 5
+          }
+        },
+        {
+          "key": "i2v",
+          "modelType": "image_to_video",
+          "aspectRatioPolicy": "derived_from_reference",
+          "options": {
+            "resolutions": [
+              "720P",
+              "1080P"
+            ],
+            "durations": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ]
+          },
+          "defaults": {
+            "resolution": "1080P",
+            "duration": 5
+          }
+        },
+        {
+          "key": "ref",
+          "modelType": "reference_to_video",
+          "aspectRatioPolicy": "required",
+          "referenceImageRange": {
+            "min": 1,
+            "max": 9
+          },
+          "options": {
+            "aspectRatios": [
+              "16:9",
+              "9:16",
+              "1:1",
+              "4:3",
+              "3:4"
+            ],
+            "resolutions": [
+              "720P",
+              "1080P"
+            ],
+            "durations": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "resolution": "1080P",
+            "duration": 5
+          }
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "model": "happyhorse-1.0-edit",
+      "provider": "alibaba",
+      "name": "videoModels.name.happyhorse10VideoEdit",
+      "description": "videoModels.descriptions.happyhorse10VideoEdit",
+      "duration": "2~5 min",
+      "featureTags": [
+        {
+          "labelKey": "video.featureTag.resolution",
+          "labelParams": {
+            "value": "1080P"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.audio",
+          "iconOnly": true
+        }
+      ],
+      "variants": [
+        {
+          "key": "video-edit",
+          "modelType": "video_edit",
+          "aspectRatioPolicy": "forbidden",
+          "referenceVideoRange": {
+            "min": 1,
+            "max": 1
+          },
+          "options": {
+            "resolutions": [
+              "720P",
+              "1080P"
+            ],
+            "supportsAudio": true
+          },
+          "defaults": {
+            "resolution": "1080P"
+          }
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "model": "kling-o3-video-edit",
+      "provider": "kling",
+      "name": "videoModels.name.klingO3VideoEdit",
+      "description": "videoModels.descriptions.klingO3VideoEdit",
+      "duration": "2 min",
+      "isNew": true,
+      "isHidden": true,
+      "variants": [
+        {
+          "key": "video-edit",
+          "modelType": "video_edit",
+          "referenceVideoRange": {
+            "min": 1,
+            "max": 1
+          },
+          "options": {
+            "durations": [
+              3,
+              5,
+              10,
+              15
+            ]
+          },
+          "defaults": {
+            "duration": 5,
+            "keepOriginalAudio": false
+          }
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "model": "kling-video-o3-edit",
+      "provider": "kling",
+      "name": "videoModels.name.klingVideoO3Edit",
+      "description": "videoModels.descriptions.klingVideoO3Edit",
+      "duration": "2 min",
+      "featureTags": [
+        {
+          "labelKey": "video.featureTag.resolution",
+          "labelParams": {
+            "value": "1080P"
+          }
+        }
+      ],
+      "variants": [
+        {
+          "key": "video-edit",
+          "modelType": "video_edit",
+          "referenceVideoRange": {
+            "min": 1,
+            "max": 1
+          },
+          "options": {
+            "durations": [],
+            "supportElements": true,
+            "modes": [
+              "std",
+              "pro"
+            ]
+          },
+          "defaults": {
+            "generateMode": "pro"
+          }
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "model": "kling-video-o1-edit",
+      "provider": "kling",
+      "name": "videoModels.name.klingVideoO1Edit",
+      "description": "videoModels.descriptions.klingVideoO1Edit",
+      "duration": "2 min",
+      "variants": [
+        {
+          "key": "video-edit",
+          "modelType": "video_edit",
+          "referenceVideoRange": {
+            "min": 1,
+            "max": 1
+          },
+          "options": {
+            "durations": [
+              5,
+              10
+            ],
+            "supportElements": true
+          },
+          "defaults": {
+            "keepOriginalSound": "yes",
+            "duration": 5
+          }
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "model": "kling-video-o1",
+      "provider": "kling",
+      "name": "videoModels.name.klingVideoO1",
+      "description": "videoModels.descriptions.klingVideoO1",
+      "duration": "2 min",
+      "referenceLabelKey": "videoConfigs.referenceOmni",
+      "featureTags": [
+        {
+          "labelKey": "video.featureTag.resolution",
+          "labelParams": {
+            "value": "1080P"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.duration",
+          "labelParams": {
+            "value": "5-10S"
+          }
+        }
+      ],
+      "variants": [
+        {
+          "key": "t2v",
+          "modelType": "text_to_video",
+          "options": {
+            "durations": [
+              5,
+              10
+            ],
+            "aspectRatios": [
+              "16:9",
+              "9:16",
+              "1:1"
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "duration": 5
+          }
+        },
+        {
+          "key": "i2v",
+          "modelType": "image_to_video",
+          "options": {
+            "durations": [
+              5,
+              10
+            ]
+          },
+          "defaults": {
+            "duration": 5
+          }
+        },
+        {
+          "key": "start_end",
+          "modelType": "start_end_to_video",
+          "options": {
+            "durations": [
+              5,
+              10
+            ]
+          },
+          "defaults": {
+            "duration": 5
+          }
+        },
+        {
+          "key": "ref_to_video",
+          "modelType": "reference_to_video",
+          "referenceImageRange": {
+            "min": 1,
+            "max": 7
+          },
+          "options": {
+            "durations": [
+              5,
+              10
+            ],
+            "aspectRatios": [
+              "16:9",
+              "9:16",
+              "1:1"
+            ],
+            "supportElements": true
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "duration": 5
+          }
+        },
+        {
+          "key": "video-reference",
+          "modelType": "reference_video_to_video",
+          "referenceImageRange": {
+            "min": 0,
+            "max": 4
+          },
+          "referenceVideoRange": {
+            "min": 1,
+            "max": 1
+          },
+          "options": {
+            "durations": [
+              5,
+              10
+            ],
+            "supportElements": true,
+            "aspectRatios": [
+              "16:9",
+              "9:16",
+              "1:1"
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "duration": 5,
+            "keepOriginalSound": "yes"
+          }
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "model": "veo3.1-lite",
+      "provider": "google",
+      "name": "videoModels.name.veo3_1Lite",
+      "description": "videoModels.descriptions.veo3_1Lite",
+      "duration": "1 min",
+      "featureTags": [
+        {
+          "labelKey": "video.featureTag.resolution",
+          "labelParams": {
+            "value": "1080P"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.duration",
+          "labelParams": {
+            "value": "4-8S"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.audio",
+          "iconOnly": true
+        }
+      ],
+      "variants": [
+        {
+          "key": "text",
+          "modelType": "text_to_video",
+          "options": {
+            "aspectRatios": [
+              "16:9",
+              "9:16"
+            ],
+            "durations": [
+              4,
+              6,
+              8
+            ],
+            "resolutions": [
+              "720p",
+              "1080p"
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "duration": 8,
+            "resolution": "720p",
+            "generateAudio": true
+          }
+        },
+        {
+          "key": "image",
+          "modelType": "image_to_video",
+          "options": {
+            "aspectRatios": [
+              "16:9",
+              "9:16"
+            ],
+            "durations": [
+              4,
+              6,
+              8
+            ],
+            "resolutions": [
+              "720p",
+              "1080p"
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "duration": 8,
+            "resolution": "720p",
+            "generateAudio": true
+          }
+        },
+        {
+          "key": "start_end",
+          "modelType": "start_end_to_video",
+          "options": {
+            "aspectRatios": [
+              "16:9",
+              "9:16"
+            ],
+            "durations": [
+              4,
+              6,
+              8
+            ],
+            "resolutions": [
+              "720p",
+              "1080p"
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "duration": 8,
+            "resolution": "720p",
+            "generateAudio": true
+          }
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "model": "veo3.1-lite-extend",
+      "provider": "google",
+      "name": "videoModels.name.veo3_1LiteExtend",
+      "description": "videoModels.descriptions.veo3_1LiteExtend",
+      "duration": "1 min",
+      "isHidden": true,
+      "variants": [
+        {
+          "key": "extend",
+          "modelType": "video_extend",
+          "referenceVideoRange": {
+            "min": 1,
+            "max": 1
+          },
+          "referenceImageRange": {
+            "min": 0,
+            "max": 0
+          },
+          "options": {
+            "aspectRatios": [
+              "16:9",
+              "9:16"
+            ],
+            "durations": [
+              4,
+              6,
+              8
+            ],
+            "resolutions": [
+              "720p",
+              "1080p"
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "duration": 8,
+            "resolution": "720p"
+          }
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "model": "veo3.1-fast",
+      "provider": "google",
+      "name": "videoModels.name.veo3_1_fast",
+      "description": "videoModels.descriptions.veo3_1_fast",
+      "duration": "1 min",
+      "discount": {
+        "rate": 0.67
+      },
+      "feature": "videoModels.features.4k",
+      "featureTags": [
+        {
+          "labelKey": "video.featureTag.resolution",
+          "labelParams": {
+            "value": "4K"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.duration",
+          "labelParams": {
+            "value": "4-8S"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.audio",
+          "iconOnly": true
+        }
+      ],
+      "variants": [
+        {
+          "key": "text",
+          "modelType": "text_to_video",
+          "options": {
+            "aspectRatios": [
+              "16:9",
+              "9:16"
+            ],
+            "resolutions": [
+              "720p",
+              "1080p",
+              "4k"
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "duration": 8,
+            "resolution": "1080p",
+            "generateAudio": true
+          }
+        },
+        {
+          "key": "image",
+          "modelType": "image_to_video",
+          "options": {
+            "aspectRatios": [
+              "16:9",
+              "9:16"
+            ],
+            "resolutions": [
+              "720p",
+              "1080p",
+              "4k"
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "duration": 8,
+            "resolution": "1080p",
+            "generateAudio": true
+          }
+        },
+        {
+          "key": "start_end",
+          "modelType": "start_end_to_video",
+          "options": {
+            "aspectRatios": [
+              "16:9",
+              "9:16"
+            ],
+            "resolutions": [
+              "720p",
+              "1080p",
+              "4k"
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "duration": 8,
+            "resolution": "1080p",
+            "generateAudio": true
+          }
+        },
+        {
+          "key": "reference",
+          "modelType": "reference_to_video",
+          "referenceImageRange": {
+            "min": 1,
+            "max": 3
+          },
+          "options": {
+            "aspectRatios": [
+              "16:9"
+            ],
+            "durations": [
+              8
+            ],
+            "resolutions": [
+              "720p",
+              "1080p",
+              "4k"
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "duration": 8,
+            "resolution": "1080p",
+            "generateAudio": true
+          }
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "model": "veo3.1",
+      "provider": "google",
+      "name": "videoModels.name.veo3_1",
+      "description": "videoModels.descriptions.veo3_1",
+      "duration": "2 min",
+      "feature": "videoModels.features.4k",
+      "featureTags": [
+        {
+          "labelKey": "video.featureTag.resolution",
+          "labelParams": {
+            "value": "4K"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.duration",
+          "labelParams": {
+            "value": "4-8S"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.audio",
+          "iconOnly": true
+        }
+      ],
+      "variants": [
+        {
+          "key": "text",
+          "modelType": "text_to_video",
+          "options": {
+            "aspectRatios": [
+              "16:9",
+              "9:16"
+            ],
+            "resolutions": [
+              "720p",
+              "1080p",
+              "4k"
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "duration": 8,
+            "resolution": "1080p",
+            "generateAudio": true
+          }
+        },
+        {
+          "key": "image",
+          "modelType": "image_to_video",
+          "options": {
+            "aspectRatios": [
+              "16:9",
+              "9:16"
+            ],
+            "resolutions": [
+              "720p",
+              "1080p",
+              "4k"
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "duration": 8,
+            "resolution": "1080p",
+            "generateAudio": true
+          }
+        },
+        {
+          "key": "start_end",
+          "modelType": "start_end_to_video",
+          "options": {
+            "aspectRatios": [
+              "16:9",
+              "9:16"
+            ],
+            "resolutions": [
+              "720p",
+              "1080p",
+              "4k"
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "duration": 8,
+            "resolution": "1080p",
+            "generateAudio": true
+          }
+        },
+        {
+          "key": "reference",
+          "modelType": "reference_to_video",
+          "referenceImageRange": {
+            "min": 1,
+            "max": 3
+          },
+          "options": {
+            "aspectRatios": [
+              "16:9"
+            ],
+            "durations": [
+              8
+            ],
+            "resolutions": [
+              "720p",
+              "1080p",
+              "4k"
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "duration": 8,
+            "resolution": "1080p",
+            "generateAudio": true
+          }
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "model": "seedance-1.5-pro",
+      "provider": "byteplus",
+      "name": "videoModels.name.seedance15Pro",
+      "description": "videoModels.descriptions.seedance15Pro",
+      "duration": "1.5 min",
+      "isFree": true,
+      "isComingSoon": false,
+      "featureTags": [
+        {
+          "labelKey": "video.featureTag.resolution",
+          "labelParams": {
+            "value": "1080P"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.duration",
+          "labelParams": {
+            "value": "5-10S"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.audio",
+          "iconOnly": true
+        }
+      ],
+      "variants": [
+        {
+          "key": "text",
+          "modelType": "text_to_video",
+          "options": {
+            "aspectRatios": [
+              "16:9",
+              "4:3",
+              "1:1",
+              "3:4",
+              "9:16",
+              "21:9"
+            ],
+            "durations": [
+              5,
+              10
+            ],
+            "resolutions": [
+              "480p",
+              "720p",
+              "1080p"
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "duration": 5,
+            "resolution": "720p",
+            "generateAudio": true
+          }
+        },
+        {
+          "key": "image",
+          "modelType": "image_to_video",
+          "options": {
+            "aspectRatios": [
+              "16:9",
+              "4:3",
+              "1:1",
+              "3:4",
+              "9:16",
+              "21:9"
+            ],
+            "durations": [
+              5,
+              10
+            ],
+            "resolutions": [
+              "480p",
+              "720p",
+              "1080p"
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "duration": 5,
+            "resolution": "480p",
+            "generateAudio": true
+          }
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "model": "wanxiang-v2-6",
+      "provider": "wanxiang",
+      "name": "videoModels.name.wanxiang26",
+      "description": "videoModels.descriptions.wanxiang26",
+      "duration": "2 min",
+      "isComingSoon": false,
+      "isHidden": false,
+      "isFree": true,
+      "featureTags": [
+        {
+          "labelKey": "video.featureTag.resolution",
+          "labelParams": {
+            "value": "1080P"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.duration",
+          "labelParams": {
+            "value": "2-15S"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.audio",
+          "iconOnly": true
+        }
+      ],
+      "variants": [
+        {
+          "key": "t2v",
+          "modelType": "text_to_video",
+          "referenceAudioRange": {
+            "min": 0,
+            "max": 1
+          },
+          "options": {
+            "aspectRatios": [
+              "16:9",
+              "9:16",
+              "1:1"
+            ],
+            "resolutions": [
+              "720P",
+              "1080P"
+            ],
+            "durations": [
+              5,
+              10,
+              15
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "resolution": "720P",
+            "duration": 5,
+            "generateAudio": true,
+            "generateMultiClip": false
+          }
+        },
+        {
+          "key": "i2v",
+          "modelType": "image_to_video",
+          "referenceAudioRange": {
+            "min": 0,
+            "max": 1
+          },
+          "options": {
+            "resolutions": [
+              "720P",
+              "1080P"
+            ],
+            "durations": [
+              5,
+              10,
+              15
+            ]
+          },
+          "defaults": {
+            "resolution": "720P",
+            "duration": 5,
+            "generateAudio": true,
+            "generateMultiClip": false
+          }
+        },
+        {
+          "key": "v2v",
+          "modelType": "reference_video_to_video",
+          "referenceVideoRange": {
+            "min": 1,
+            "max": 2
+          },
+          "referenceImageRange": {
+            "min": 0,
+            "max": 3
+          },
+          "options": {
+            "aspectRatios": [
+              "16:9",
+              "9:16",
+              "1:1"
+            ],
+            "resolutions": [
+              "720P",
+              "1080P"
+            ],
+            "durations": [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "resolution": "720P",
+            "duration": 5,
+            "generateAudio": true,
+            "generateMultiClip": false
+          }
+        },
+        {
+          "key": "ref",
+          "modelType": "reference_to_video",
+          "referenceImageRange": {
+            "min": 1,
+            "max": 5
+          },
+          "options": {
+            "aspectRatios": [
+              "16:9",
+              "9:16",
+              "1:1"
+            ],
+            "resolutions": [
+              "720P",
+              "1080P"
+            ],
+            "durations": [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "resolution": "720P",
+            "duration": 5,
+            "generateAudio": true,
+            "generateMultiClip": false
+          }
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "model": "kling-v2-6",
+      "provider": "kling",
+      "name": "videoModels.name.kling26",
+      "description": "videoModels.descriptions.kling26",
+      "duration": "2 min",
+      "featureTags": [
+        {
+          "labelKey": "video.featureTag.duration",
+          "labelParams": {
+            "value": "5-10S"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.audio",
+          "iconOnly": true
+        }
+      ],
+      "variants": [
+        {
+          "key": "t2v",
+          "modelType": "text_to_video",
+          "options": {
+            "durations": [
+              5,
+              10
+            ],
+            "aspectRatios": [
+              "16:9",
+              "9:16",
+              "1:1"
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "duration": 5,
+            "generateAudio": true
+          }
+        },
+        {
+          "key": "i2v",
+          "modelType": "image_to_video",
+          "options": {
+            "durations": [
+              5,
+              10
+            ]
+          },
+          "defaults": {
+            "duration": 5,
+            "generateAudio": true
+          }
+        },
+        {
+          "key": "start_end",
+          "modelType": "start_end_to_video",
+          "options": {
+            "durations": [
+              5,
+              10
+            ]
+          },
+          "defaults": {
+            "duration": 5
+          }
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "model": "MiniMax-Hailuo-2.3",
+      "provider": "minimax",
+      "name": "videoModels.name.hailuo23",
+      "description": "videoModels.descriptions.hailuo23",
+      "duration": "3 min",
+      "featureTags": [
+        {
+          "labelKey": "video.featureTag.resolution",
+          "labelParams": {
+            "value": "1080P"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.duration",
+          "labelParams": {
+            "value": "6-10S"
+          }
+        }
+      ],
+      "variants": [
+        {
+          "key": "text",
+          "modelType": "text_to_video",
+          "options": {
+            "durations": [
+              6,
+              10
+            ]
+          },
+          "defaults": {
+            "duration": 6,
+            "resolution": "1080P"
+          }
+        },
+        {
+          "key": "image",
+          "modelType": "image_to_video",
+          "options": {
+            "durations": [
+              6,
+              10
+            ]
+          },
+          "defaults": {
+            "duration": 6,
+            "resolution": "1080P"
+          }
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "model": "doubao-seedance-pro",
+      "provider": "bytedance",
+      "name": "videoModels.name.jimengPro",
+      "description": "videoModels.descriptions.jimengPro",
+      "duration": "1.5 min",
+      "featureTags": [
+        {
+          "labelKey": "video.featureTag.resolution",
+          "labelParams": {
+            "value": "1080P"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.duration",
+          "labelParams": {
+            "value": "5-10S"
+          }
+        }
+      ],
+      "variants": [
+        {
+          "key": "text",
+          "modelType": "text_to_video",
+          "options": {
+            "aspectRatios": [
+              "21:9",
+              "16:9",
+              "4:3",
+              "1:1",
+              "3:4",
+              "9:16",
+              "9:21"
+            ],
+            "durations": [
+              5,
+              10
+            ],
+            "resolutions": [
+              "480p",
+              "720p",
+              "1080p"
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "duration": 5,
+            "resolution": "1080p"
+          }
+        },
+        {
+          "key": "image",
+          "modelType": "image_to_video",
+          "options": {
+            "durations": [
+              5,
+              10
+            ],
+            "aspectRatios": [
+              "21:9",
+              "16:9",
+              "4:3",
+              "1:1",
+              "3:4",
+              "9:16",
+              "9:21"
+            ],
+            "resolutions": [
+              "480p",
+              "720p",
+              "1080p"
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "duration": 5,
+            "resolution": "1080p"
+          }
+        },
+        {
+          "key": "start_end",
+          "modelType": "start_end_to_video",
+          "options": {
+            "durations": [
+              5,
+              10
+            ],
+            "aspectRatios": [
+              "21:9",
+              "16:9",
+              "4:3",
+              "1:1",
+              "3:4",
+              "9:16",
+              "9:21"
+            ],
+            "resolutions": [
+              "480p",
+              "720p",
+              "1080p"
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "duration": 5,
+            "resolution": "1080p"
+          }
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "model": "doubao-seedance-lite",
+      "provider": "bytedance",
+      "name": "videoModels.name.jimengLite",
+      "description": "videoModels.descriptions.jimengLite",
+      "duration": "1 min",
+      "isHidden": true,
+      "featureTags": [
+        {
+          "labelKey": "video.featureTag.resolution",
+          "labelParams": {
+            "value": "1080P"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.duration",
+          "labelParams": {
+            "value": "5-10S"
+          }
+        }
+      ],
+      "variants": [
+        {
+          "key": "text",
+          "modelType": "text_to_video",
+          "options": {
+            "aspectRatios": [
+              "21:9",
+              "16:9",
+              "4:3",
+              "1:1",
+              "3:4",
+              "9:16",
+              "9:21"
+            ],
+            "durations": [
+              5,
+              10
+            ],
+            "resolutions": [
+              "480p",
+              "720p",
+              "1080p"
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "duration": 5,
+            "resolution": "1080p"
+          }
+        },
+        {
+          "key": "image",
+          "modelType": "image_to_video",
+          "options": {
+            "durations": [
+              5,
+              10
+            ],
+            "aspectRatios": [
+              "21:9",
+              "16:9",
+              "4:3",
+              "1:1",
+              "3:4",
+              "9:16",
+              "9:21"
+            ],
+            "resolutions": [
+              "480p",
+              "720p"
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "duration": 5,
+            "resolution": "720p"
+          }
+        },
+        {
+          "key": "start_end",
+          "modelType": "start_end_to_video",
+          "options": {
+            "durations": [
+              5,
+              10
+            ],
+            "aspectRatios": [
+              "21:9",
+              "16:9",
+              "4:3",
+              "1:1",
+              "3:4",
+              "9:16",
+              "9:21"
+            ],
+            "resolutions": [
+              "480p",
+              "720p"
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "duration": 5,
+            "resolution": "720p"
+          }
+        },
+        {
+          "key": "reference",
+          "modelType": "reference_to_video",
+          "referenceImageRange": {
+            "min": 1,
+            "max": 4
+          },
+          "options": {
+            "durations": [
+              5,
+              10
+            ],
+            "aspectRatios": [
+              "21:9",
+              "16:9",
+              "4:3",
+              "1:1",
+              "3:4",
+              "9:16",
+              "9:21"
+            ],
+            "resolutions": [
+              "480p",
+              "720p"
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "duration": 5,
+            "resolution": "720p"
+          }
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "model": "midjourney-video",
+      "provider": "midjourney",
+      "name": "videoModels.name.midjourneyVideo",
+      "description": "videoModels.descriptions.midjourneyVideo",
+      "duration": "3 min",
+      "isFree": true,
+      "featureTags": [
+        {
+          "labelKey": "video.featureTag.resolution",
+          "labelParams": {
+            "value": "720P"
+          }
+        }
+      ],
+      "variants": [
+        {
+          "key": "image",
+          "modelType": "image_to_video",
+          "options": {
+            "resolutions": [
+              "480P",
+              "720P"
+            ]
+          },
+          "defaults": {
+            "resolution": "720P",
+            "loop": false
+          }
+        },
+        {
+          "key": "start_end",
+          "modelType": "start_end_to_video",
+          "options": {
+            "resolutions": [
+              "480P",
+              "720P"
+            ]
+          },
+          "defaults": {
+            "resolution": "720P",
+            "loop": false
+          }
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "model": "minimax",
+      "provider": "minimax",
+      "name": "videoModels.name.hailuo",
+      "description": "videoModels.descriptions.hailuo",
+      "duration": "3 min",
+      "isFree": true,
+      "featureTags": [
+        {
+          "labelKey": "video.featureTag.resolution",
+          "labelParams": {
+            "value": "1080P"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.duration",
+          "labelParams": {
+            "value": "6-10S"
+          }
+        }
+      ],
+      "variants": [
+        {
+          "key": "text",
+          "modelType": "text_to_video",
+          "options": {
+            "durations": [
+              6,
+              10
+            ]
+          },
+          "defaults": {
+            "duration": 6,
+            "resolution": "768P"
+          }
+        },
+        {
+          "key": "image",
+          "modelType": "image_to_video",
+          "options": {
+            "durations": [
+              6,
+              10
+            ]
+          },
+          "defaults": {
+            "duration": 6,
+            "resolution": "768P"
+          }
+        },
+        {
+          "key": "start_end",
+          "modelType": "start_end_to_video",
+          "options": {
+            "durations": [
+              6,
+              10
+            ]
+          },
+          "defaults": {
+            "duration": 6,
+            "resolution": "768P"
+          }
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "model": "MiniMax-Hailuo-2.3-Fast",
+      "provider": "minimax",
+      "name": "videoModels.name.hailuo23Fast",
+      "description": "videoModels.descriptions.hailuo23Fast",
+      "duration": "1 min",
+      "featureTags": [
+        {
+          "labelKey": "video.featureTag.resolution",
+          "labelParams": {
+            "value": "1080P"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.duration",
+          "labelParams": {
+            "value": "6-10S"
+          }
+        }
+      ],
+      "variants": [
+        {
+          "key": "image",
+          "modelType": "image_to_video",
+          "options": {
+            "durations": [
+              6,
+              10
+            ]
+          },
+          "defaults": {
+            "duration": 6,
+            "resolution": "1080P"
+          }
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "model": "viduq1",
+      "provider": "vidu",
+      "name": "videoModels.name.viduQ1",
+      "description": "videoModels.descriptions.viduQ1",
+      "duration": "3 min",
+      "isHidden": true,
+      "variants": [
+        {
+          "key": "image",
+          "modelType": "image_to_video",
+          "options": {},
+          "defaults": {}
+        },
+        {
+          "key": "start_end",
+          "modelType": "start_end_to_video",
+          "options": {},
+          "defaults": {}
+        },
+        {
+          "key": "reference",
+          "modelType": "reference_to_video",
+          "referenceImageRange": {
+            "min": 1,
+            "max": 4
+          },
+          "options": {
+            "aspectRatios": [
+              "16:9",
+              "9:16",
+              "1:1"
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9"
+          }
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "model": "viduq2",
+      "provider": "vidu",
+      "name": "videoModels.name.viduQ2",
+      "description": "videoModels.descriptions.viduQ2",
+      "duration": "3 min",
+      "isFree": true,
+      "featureTags": [
+        {
+          "labelKey": "video.featureTag.resolution",
+          "labelParams": {
+            "value": "1080P"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.duration",
+          "labelParams": {
+            "value": "1-8S"
+          }
+        }
+      ],
+      "variants": [
+        {
+          "key": "text",
+          "modelType": "text_to_video",
+          "options": {
+            "aspectRatios": [
+              "16:9",
+              "9:16",
+              "1:1",
+              "3:4",
+              "4:3"
+            ],
+            "resolutions": [
+              "360p",
+              "540p",
+              "720p",
+              "1080p"
+            ],
+            "durations": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          "defaults": {
+            "duration": 5,
+            "resolution": "540p",
+            "aspectRatio": "16:9"
+          }
+        },
+        {
+          "key": "reference",
+          "modelType": "reference_to_video",
+          "referenceImageRange": {
+            "min": 1,
+            "max": 7
+          },
+          "options": {
+            "aspectRatios": [
+              "16:9",
+              "9:16",
+              "1:1",
+              "3:4",
+              "4:3"
+            ],
+            "resolutions": [
+              "360p",
+              "540p",
+              "720p",
+              "1080p"
+            ],
+            "durations": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          "defaults": {
+            "duration": 5,
+            "resolution": "540p"
+          }
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "model": "viduq2-pro",
+      "provider": "vidu",
+      "name": "videoModels.name.viduQ2Pro",
+      "description": "videoModels.descriptions.viduQ2Pro",
+      "duration": "3 min",
+      "featureTags": [
+        {
+          "labelKey": "video.featureTag.resolution",
+          "labelParams": {
+            "value": "1080P"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.duration",
+          "labelParams": {
+            "value": "1-8S"
+          }
+        }
+      ],
+      "variants": [
+        {
+          "key": "image",
+          "modelType": "image_to_video",
+          "options": {
+            "resolutions": [
+              "720p",
+              "1080p"
+            ],
+            "durations": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          "defaults": {
+            "resolution": "1080p",
+            "duration": 5
+          }
+        },
+        {
+          "key": "start_end",
+          "modelType": "start_end_to_video",
+          "options": {
+            "resolutions": [
+              "720p",
+              "1080p"
+            ],
+            "durations": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          "defaults": {
+            "resolution": "1080p",
+            "duration": 5
+          }
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "model": "viduq2-turbo",
+      "provider": "vidu",
+      "name": "videoModels.name.viduQ2Turbo",
+      "description": "videoModels.descriptions.viduQ2Turbo",
+      "duration": "3 min",
+      "featureTags": [
+        {
+          "labelKey": "video.featureTag.resolution",
+          "labelParams": {
+            "value": "1080P"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.duration",
+          "labelParams": {
+            "value": "1-8S"
+          }
+        }
+      ],
+      "variants": [
+        {
+          "key": "image",
+          "modelType": "image_to_video",
+          "options": {
+            "resolutions": [
+              "720p",
+              "1080p"
+            ],
+            "durations": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          "defaults": {
+            "resolution": "1080p",
+            "duration": 5
+          }
+        },
+        {
+          "key": "start_end",
+          "modelType": "start_end_to_video",
+          "options": {
+            "resolutions": [
+              "720p",
+              "1080p"
+            ],
+            "durations": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          "defaults": {
+            "resolution": "1080p",
+            "duration": 5
+          }
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "model": "viduq3-pro",
+      "provider": "vidu",
+      "name": "videoModels.name.viduQ3",
+      "description": "videoModels.descriptions.viduQ3",
+      "duration": "3 min",
+      "featureTags": [
+        {
+          "labelKey": "video.featureTag.resolution",
+          "labelParams": {
+            "value": "1080P"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.duration",
+          "labelParams": {
+            "value": "1-16S"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.audio",
+          "iconOnly": true
+        }
+      ],
+      "variants": [
+        {
+          "key": "text",
+          "modelType": "text_to_video",
+          "options": {
+            "aspectRatios": [
+              "16:9",
+              "9:16",
+              "1:1",
+              "3:4",
+              "4:3"
+            ],
+            "resolutions": [
+              "360p",
+              "540p",
+              "720p",
+              "1080p"
+            ],
+            "durations": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16
+            ]
+          },
+          "defaults": {
+            "duration": 5,
+            "resolution": "720p",
+            "aspectRatio": "16:9",
+            "generateAudio": true,
+            "style": "general"
+          }
+        },
+        {
+          "key": "image",
+          "modelType": "image_to_video",
+          "options": {
+            "durations": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16
+            ]
+          },
+          "defaults": {
+            "duration": 5,
+            "resolution": "720p",
+            "generateAudio": true,
+            "style": "general"
+          }
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "model": "kling",
+      "provider": "kling",
+      "name": "videoModels.name.kling",
+      "description": "videoModels.descriptions.kling",
+      "duration": "2 min",
+      "featureTags": [
+        {
+          "labelKey": "video.featureTag.resolution",
+          "labelParams": {
+            "value": "1080P"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.duration",
+          "labelParams": {
+            "value": "5-10S"
+          }
+        }
+      ],
+      "variants": [
+        {
+          "key": "t2v",
+          "modelType": "text_to_video",
+          "options": {
+            "durations": [
+              5,
+              10
+            ],
+            "aspectRatios": [
+              "16:9",
+              "9:16",
+              "1:1"
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "duration": 5
+          }
+        },
+        {
+          "key": "i2v",
+          "modelType": "image_to_video",
+          "options": {
+            "durations": [
+              5,
+              10
+            ]
+          },
+          "defaults": {
+            "duration": 5
+          }
+        },
+        {
+          "key": "start_end",
+          "modelType": "start_end_to_video",
+          "options": {
+            "durations": [
+              5,
+              10
+            ]
+          },
+          "defaults": {
+            "duration": 5
+          }
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "model": "kling-v2-5-turbo-pro",
+      "provider": "kling",
+      "name": "videoModels.name.kling25",
+      "description": "videoModels.descriptions.kling25",
+      "duration": "2 min",
+      "featureTags": [
+        {
+          "labelKey": "video.featureTag.resolution",
+          "labelParams": {
+            "value": "1080P"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.duration",
+          "labelParams": {
+            "value": "5-10S"
+          }
+        }
+      ],
+      "variants": [
+        {
+          "key": "t2v",
+          "modelType": "text_to_video",
+          "options": {
+            "durations": [
+              5,
+              10
+            ],
+            "aspectRatios": [
+              "16:9",
+              "9:16",
+              "1:1"
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "duration": 5
+          }
+        },
+        {
+          "key": "i2v",
+          "modelType": "image_to_video",
+          "options": {
+            "durations": [
+              5,
+              10
+            ]
+          },
+          "defaults": {
+            "duration": 5
+          }
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "model": "kling-motion-control",
+      "provider": "kling",
+      "name": "videoModels.name.klingMotionControl",
+      "description": "videoModels.descriptions.klingMotionControl",
+      "duration": "2~5 min",
+      "variants": [
+        {
+          "key": "video-edit",
+          "modelType": "video_edit",
+          "referenceImageRange": {
+            "min": 1,
+            "max": 1
+          },
+          "referenceVideoRange": {
+            "min": 1,
+            "max": 1
+          },
+          "options": {},
+          "defaults": {
+            "character_orientation": "image",
+            "generateMode": "pro",
+            "keep_original_sound": "yes",
+            "times": 1
+          }
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "model": "wanxiang-plus",
+      "provider": "wanxiang",
+      "name": "videoModels.name.wanxiangPlus",
+      "description": "videoModels.descriptions.wanxiangPlus",
+      "duration": "2 min",
+      "isFree": false,
+      "featureTags": [
+        {
+          "labelKey": "video.featureTag.resolution",
+          "labelParams": {
+            "value": "1080P"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.duration",
+          "labelParams": {
+            "value": "5S"
+          }
+        }
+      ],
+      "variants": [
+        {
+          "key": "t2v",
+          "modelType": "text_to_video",
+          "options": {
+            "aspectRatios": [
+              "16:9",
+              "9:16",
+              "1:1"
+            ],
+            "resolutions": [
+              "480P",
+              "1080P"
+            ],
+            "durations": [
+              5
+            ]
+          },
+          "defaults": {
+            "resolution": "1080P",
+            "duration": 5
+          }
+        },
+        {
+          "key": "i2v",
+          "modelType": "image_to_video",
+          "options": {
+            "resolutions": [
+              "480P",
+              "1080P"
+            ],
+            "durations": [
+              5
+            ]
+          },
+          "defaults": {
+            "resolution": "480P",
+            "duration": 5
+          }
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "model": "wanxiang-i2v-flash",
+      "provider": "wanxiang",
+      "name": "videoModels.name.wanxiangFlash",
+      "description": "videoModels.descriptions.wanxiangFlash",
+      "duration": "1 min",
+      "isFree": false,
+      "featureTags": [
+        {
+          "labelKey": "video.featureTag.resolution",
+          "labelParams": {
+            "value": "720P"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.duration",
+          "labelParams": {
+            "value": "5S"
+          }
+        }
+      ],
+      "variants": [
+        {
+          "key": "i2v",
+          "modelType": "image_to_video",
+          "options": {
+            "resolutions": [
+              "480P",
+              "720P"
+            ],
+            "durations": [
+              5
+            ]
+          },
+          "defaults": {
+            "resolution": "480P",
+            "duration": 5
+          }
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "model": "wanxiang-preview",
+      "provider": "wanxiang",
+      "name": "videoModels.name.wanxiangPreview",
+      "description": "videoModels.descriptions.wanxiangPreview",
+      "duration": "2 min",
+      "isFree": false,
+      "featureTags": [
+        {
+          "labelKey": "video.featureTag.resolution",
+          "labelParams": {
+            "value": "1080P"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.duration",
+          "labelParams": {
+            "value": "5-10S"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.audio",
+          "iconOnly": true
+        }
+      ],
+      "variants": [
+        {
+          "key": "t2v",
+          "modelType": "text_to_video",
+          "referenceAudioRange": {
+            "min": 0,
+            "max": 1
+          },
+          "options": {
+            "aspectRatios": [
+              "16:9",
+              "9:16",
+              "1:1"
+            ],
+            "resolutions": [
+              "480P",
+              "720P",
+              "1080P"
+            ],
+            "durations": [
+              5,
+              10
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "resolution": "1080P",
+            "duration": 5,
+            "generateAudio": true
+          }
+        },
+        {
+          "key": "i2v",
+          "modelType": "image_to_video",
+          "referenceAudioRange": {
+            "min": 0,
+            "max": 1
+          },
+          "options": {
+            "resolutions": [
+              "480P",
+              "720P",
+              "1080P"
+            ],
+            "durations": [
+              5,
+              10
+            ]
+          },
+          "defaults": {
+            "resolution": "480P",
+            "duration": 5,
+            "generateAudio": true
+          }
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "model": "pixverse-v5.5",
+      "provider": "pixverse",
+      "name": "videoModels.name.pixverse_v5_5",
+      "description": "videoModels.descriptions.pixverse_v5_5",
+      "duration": "2 min",
+      "featureTags": [
+        {
+          "labelKey": "video.featureTag.resolution",
+          "labelParams": {
+            "value": "1080P"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.duration",
+          "labelParams": {
+            "value": "5-10S"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.audio",
+          "iconOnly": true
+        }
+      ],
+      "variants": [
+        {
+          "key": "text",
+          "modelType": "text_to_video",
+          "options": {
+            "aspectRatios": [
+              "16:9",
+              "4:3",
+              "1:1",
+              "3:4",
+              "9:16"
+            ],
+            "durations": [
+              5,
+              8,
+              10
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "resolution": "1080P",
+            "duration": 5,
+            "generateAudio": true,
+            "generateMultiClip": false
+          }
+        },
+        {
+          "key": "image",
+          "modelType": "image_to_video",
+          "options": {
+            "durations": [
+              5,
+              8,
+              10
+            ]
+          },
+          "defaults": {
+            "resolution": "720P",
+            "duration": 5,
+            "generateAudio": true,
+            "generateMultiClip": false
+          }
+        },
+        {
+          "key": "start_end",
+          "modelType": "start_end_to_video",
+          "options": {
+            "durations": [
+              5,
+              8,
+              10
+            ]
+          },
+          "defaults": {
+            "resolution": "720P",
+            "duration": 5,
+            "generateAudio": true,
+            "generateMultiClip": false
+          }
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "model": "pixverse-v5",
+      "provider": "pixverse",
+      "name": "videoModels.name.pixverse_v5",
+      "description": "videoModels.descriptions.pixverse_v5",
+      "duration": "2 min",
+      "featureTags": [
+        {
+          "labelKey": "video.featureTag.resolution",
+          "labelParams": {
+            "value": "1080P"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.duration",
+          "labelParams": {
+            "value": "5-8S"
+          }
+        }
+      ],
+      "variants": [
+        {
+          "key": "text",
+          "modelType": "text_to_video",
+          "options": {
+            "aspectRatios": [
+              "16:9",
+              "4:3",
+              "1:1",
+              "3:4",
+              "9:16"
+            ],
+            "resolutions": [
+              "360P",
+              "540P",
+              "720P",
+              "1080P"
+            ],
+            "durations": [
+              5,
+              8
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "resolution": "1080P",
+            "duration": 5,
+            "soundEffect": false
+          }
+        },
+        {
+          "key": "image",
+          "modelType": "image_to_video",
+          "options": {
+            "resolutions": [
+              "360P",
+              "540P",
+              "720P",
+              "1080P"
+            ],
+            "durations": [
+              5,
+              8
+            ]
+          },
+          "defaults": {
+            "resolution": "720P",
+            "duration": 5,
+            "soundEffect": false
+          }
+        },
+        {
+          "key": "start_end",
+          "modelType": "start_end_to_video",
+          "options": {
+            "resolutions": [
+              "360P",
+              "540P",
+              "720P",
+              "1080P"
+            ],
+            "durations": [
+              5,
+              8
+            ]
+          },
+          "defaults": {
+            "resolution": "720P",
+            "duration": 5,
+            "soundEffect": false
+          }
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "model": "veo3",
+      "provider": "google",
+      "name": "videoModels.name.veo3",
+      "description": "videoModels.descriptions.veo3",
+      "duration": "2 min",
+      "isHidden": true,
+      "featureTags": [
+        {
+          "labelKey": "video.featureTag.resolution",
+          "labelParams": {
+            "value": "1080P"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.duration",
+          "labelParams": {
+            "value": "4-8S"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.audio",
+          "iconOnly": true
+        }
+      ],
+      "variants": [
+        {
+          "key": "text",
+          "modelType": "text_to_video",
+          "options": {
+            "aspectRatios": [
+              "16:9",
+              "9:16"
+            ],
+            "resolutions": [
+              "720p",
+              "1080p"
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "duration": 8,
+            "resolution": "1080p",
+            "generateAudio": true
+          }
+        },
+        {
+          "key": "image",
+          "modelType": "image_to_video",
+          "options": {
+            "aspectRatios": [
+              "16:9",
+              "9:16"
+            ],
+            "resolutions": [
+              "720p",
+              "1080p"
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "duration": 8,
+            "resolution": "1080p",
+            "generateAudio": true
+          }
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "model": "veo3-fast",
+      "provider": "google",
+      "name": "videoModels.name.veo3Fast",
+      "description": "videoModels.descriptions.veo3Fast",
+      "duration": "1 min",
+      "isHidden": true,
+      "featureTags": [
+        {
+          "labelKey": "video.featureTag.resolution",
+          "labelParams": {
+            "value": "1080P"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.duration",
+          "labelParams": {
+            "value": "4-8S"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.audio",
+          "iconOnly": true
+        }
+      ],
+      "variants": [
+        {
+          "key": "text",
+          "modelType": "text_to_video",
+          "options": {
+            "aspectRatios": [
+              "16:9",
+              "9:16"
+            ],
+            "resolutions": [
+              "720p",
+              "1080p"
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "duration": 8,
+            "resolution": "1080p",
+            "generateAudio": true
+          }
+        },
+        {
+          "key": "image",
+          "modelType": "image_to_video",
+          "options": {
+            "aspectRatios": [
+              "16:9",
+              "9:16"
+            ],
+            "resolutions": [
+              "720p",
+              "1080p"
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "duration": 8,
+            "resolution": "1080p",
+            "generateAudio": true
+          }
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "model": "veo2",
+      "provider": "google",
+      "name": "videoModels.name.veo2",
+      "description": "videoModels.descriptions.veo2",
+      "duration": "2 min",
+      "isHidden": true,
+      "variants": [
+        {
+          "key": "start_end",
+          "modelType": "start_end_to_video",
+          "options": {
+            "aspectRatios": [
+              "16:9",
+              "9:16"
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9"
+          }
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "model": "sora-2-standard",
+      "provider": "fal",
+      "name": "videoModels.name.sora2Standard",
+      "description": "videoModels.descriptions.sora2Standard",
+      "duration": "30～60 min",
+      "featureTags": [
+        {
+          "labelKey": "video.featureTag.resolution",
+          "labelParams": {
+            "value": "720P"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.duration",
+          "labelParams": {
+            "value": "4-12S"
+          }
+        }
+      ],
+      "variants": [
+        {
+          "key": "text",
+          "modelType": "text_to_video",
+          "options": {
+            "aspectRatios": [
+              "16:9",
+              "9:16"
+            ],
+            "durations": [
+              4,
+              8,
+              12
+            ],
+            "resolutions": [
+              "720p"
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "resolution": "720p",
+            "duration": 8
+          }
+        },
+        {
+          "key": "image",
+          "modelType": "image_to_video",
+          "options": {
+            "durations": [
+              4,
+              8,
+              12
+            ],
+            "aspectRatios": [
+              "16:9",
+              "9:16"
+            ],
+            "resolutions": [
+              "720p"
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "resolution": "720p",
+            "duration": 8
+          }
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "model": "sora-2-pro",
+      "provider": "fal",
+      "name": "videoModels.name.sora2Pro",
+      "description": "videoModels.descriptions.sora2Pro",
+      "duration": "30～60 min",
+      "featureTags": [
+        {
+          "labelKey": "video.featureTag.resolution",
+          "labelParams": {
+            "value": "1080P"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.duration",
+          "labelParams": {
+            "value": "4-12S"
+          }
+        }
+      ],
+      "variants": [
+        {
+          "key": "text",
+          "modelType": "text_to_video",
+          "options": {
+            "aspectRatios": [
+              "16:9",
+              "9:16"
+            ],
+            "durations": [
+              4,
+              8,
+              12
+            ],
+            "resolutions": [
+              "720p",
+              "1080p"
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "resolution": "1080p",
+            "duration": 8
+          }
+        },
+        {
+          "key": "image",
+          "modelType": "image_to_video",
+          "options": {
+            "aspectRatios": [
+              "16:9",
+              "9:16"
+            ],
+            "durations": [
+              4,
+              8,
+              12
+            ],
+            "resolutions": [
+              "720p",
+              "1080p"
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "resolution": "1080p",
+            "duration": 8
+          }
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "model": "grok-imagine-video-1.5",
+      "provider": "xai",
+      "name": "videoModels.name.grokImagineVideo15",
+      "description": "videoModels.descriptions.grokImagineVideo15",
+      "duration": "2~5 min",
+      "isNew": true,
+      "isHidden": false,
+      "featureTags": [
+        {
+          "labelKey": "video.featureTag.resolution",
+          "labelParams": {
+            "value": "1080P"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.duration",
+          "labelParams": {
+            "value": "1-15S"
+          }
+        }
+      ],
+      "variants": [
+        {
+          "key": "image",
+          "modelType": "image_to_video",
+          "options": {
+            "durations": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "resolutions": [
+              "480p",
+              "720p",
+              "1080p"
+            ]
+          },
+          "defaults": {
+            "resolution": "720p",
+            "duration": 5
+          }
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "model": "grok-imagine-video",
+      "provider": "xai",
+      "name": "videoModels.name.grokImagineVideo",
+      "description": "videoModels.descriptions.grokImagineVideo",
+      "duration": "2~5 min",
+      "isNew": true,
+      "isHidden": false,
+      "featureTags": [
+        {
+          "labelKey": "video.featureTag.resolution",
+          "labelParams": {
+            "value": "720P"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.duration",
+          "labelParams": {
+            "value": "1-15S"
+          }
+        }
+      ],
+      "variants": [
+        {
+          "key": "text",
+          "modelType": "text_to_video",
+          "options": {
+            "aspectRatios": [
+              "16:9",
+              "9:16",
+              "1:1",
+              "4:3",
+              "3:4",
+              "3:2",
+              "2:3"
+            ],
+            "durations": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "resolutions": [
+              "480p",
+              "720p"
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "resolution": "720p",
+            "duration": 5
+          }
+        },
+        {
+          "key": "image",
+          "modelType": "image_to_video",
+          "options": {
+            "durations": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "resolutions": [
+              "480p",
+              "720p"
+            ]
+          },
+          "defaults": {
+            "resolution": "720p",
+            "duration": 5
+          }
+        },
+        {
+          "key": "ref",
+          "modelType": "reference_to_video",
+          "referenceImageRange": {
+            "min": 1,
+            "max": 7
+          },
+          "options": {
+            "aspectRatios": [
+              "16:9",
+              "9:16",
+              "1:1",
+              "4:3",
+              "3:4",
+              "3:2",
+              "2:3"
+            ],
+            "durations": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "resolutions": [
+              "480p",
+              "720p"
+            ]
+          },
+          "defaults": {
+            "aspectRatio": "16:9",
+            "resolution": "720p",
+            "duration": 5
+          }
+        },
+        {
+          "key": "video-edit",
+          "modelType": "video_edit",
+          "referenceImageRange": {
+            "min": 0,
+            "max": 0
+          },
+          "referenceVideoRange": {
+            "min": 1,
+            "max": 1
+          },
+          "options": {},
+          "defaults": {}
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "model": "omnihuman-1.5",
+      "provider": "byteplus",
+      "name": "videoModels.name.omnihuman15",
+      "description": "videoModels.descriptions.omnihuman15",
+      "duration": "1-2 min",
+      "featureTags": [
+        {
+          "labelKey": "video.featureTag.resolution",
+          "labelParams": {
+            "value": "1080P"
+          }
+        },
+        {
+          "labelKey": "video.featureTag.audio",
+          "iconOnly": true
+        }
+      ],
+      "variants": [
+        {
+          "key": "image_audio_to_video",
+          "modelType": "digital_human",
+          "referenceImageRange": {
+            "min": 1,
+            "max": 1
+          },
+          "referenceAudioRange": {
+            "min": 1,
+            "max": 1
+          },
+          "options": {},
+          "defaults": {}
+        }
+      ]
+    }
+  ]
+}
