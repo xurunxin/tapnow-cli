@@ -71,6 +71,7 @@ test('resume completed jobs reconciles output without spending twice', async () 
   assert.equal(c.calls.filter(c => c.path === '/api/conversation/v1/generations/image').length, 1);
   assert.equal(state.reservedCost, 5);
   assert.equal(c.canvas.nodes[0].data.src, 'https://files.tapnow.media/result.png');
+  assert.deepEqual(c.canvas.nodes[0].data.options, ['https://files.tapnow.media/result.png']);
 });
 test('ambiguous submission cannot resubmit', async () => {
   const p = minimal(), c = fake(), state = initial(p); await apply(c, p, state, async () => {}); state.jobs.img = { status: 'submitting' }; c.calls.length = 0;
@@ -102,6 +103,18 @@ test('changed workflow cannot reuse completed task outputs', async () => {
 test('external prompt edits cause a conflict', async () => {
   const p = minimal(), c = fake(), state = initial(p); await apply(c, p, state, async () => {});
   c.canvas.nodes[0].data.prompt = 'User edit'; await assert.rejects(apply(c, p, state, async () => {}), /edited outside CLI/);
+});
+test('web editor variant normalization does not conflict with the workflow', async () => {
+  const p = minimal(), c = fake(), state = initial(p); await apply(c, p, state, async () => {});
+  c.canvas.nodes[0].data.params.variant = 'text';
+  await apply(c, p, state, async () => {});
+});
+test('output overwrite is detected instead of reporting completion', async () => {
+  const p = minimal(), c = fake(), state = initial(p); await apply(c, p, state, async () => {});
+  const original = c.request;
+  c.request = async (method, path, body) => { const result = await original(method, path, body); if (body?.actions?.some(a => a.updates?.some(n => n.data.src))) c.canvas.nodes[0].data.src = ''; return result; };
+  await assert.rejects(run(c, p, state, async () => {}, opts), /writeback was not retained/);
+  assert.equal(state.jobs.img.status, 'completed');
 });
 test('task output extraction supports image and video responses', () => {
   assert.deepEqual(taskOutputs({ outputs: { image_urls: ['https://files.tapnow.media/a'], file_ids: ['a'] } }, 'image'), ['https://files.tapnow.media/a']);

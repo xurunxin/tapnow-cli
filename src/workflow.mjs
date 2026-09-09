@@ -76,7 +76,11 @@ export async function getCanvas(client, id) {
 async function batch(client, canvasId, kind, actions) {
   if (actions.length) await client.request('POST', canvasPath(canvasId) + `/${kind}:batchActions`, { canvas_id: canvasId, actions, created_by_role: 'user' });
 }
-function config(data) { return { prompt: data.prompt, title: data.title, params: data.params, type: data.type }; }
+function config(data) {
+  const { variant, ...params } = data.params || {};
+  // The web editor adds UI variant selectors and text-model defaults on first open.
+  return { prompt: data.prompt, title: data.title, params: typeof data.text === 'string' ? {} : params, type: data.type };
+}
 export async function apply(client, plan, state, save) {
   if (Object.keys(state.jobs).length && state.planHash !== hash(plan)) throw new Error('A submitted run is immutable. Create a new workflow/state for changed requirements.');
   const identity = await client.identity();
@@ -100,7 +104,7 @@ export async function apply(client, plan, state, save) {
   for (const [index, n] of sorted.entries()) {
     state.nodes[n.id] ||= `${n.type}-${hash([state.namespace, n.id]).slice(0, 32)}`;
     const nodeId = state.nodes[n.id], existing = canvas.nodes.find(r => r.id === nodeId);
-    let params = {};
+    let params = n.type === 'text' ? existing?.data?.params || {} : {};
     if (n.type !== 'text' && !n.src) {
       const parentImages = plan.links.filter(l => l.to === n.id && plan.nodes.find(p => p.id === l.from)?.type === 'image').map(() => 'https://example.invalid/reference');
       const p = frontendParams(n, { images: parentImages });
@@ -109,6 +113,7 @@ export async function apply(client, plan, state, save) {
     }
     const data = { ...existing?.data, src: existing?.data?.src || n.src || '', prompt: n.prompt, title: n.title || n.id,
       type: n.src ? 'upload' : 'generate', params,
+      ...(n.src ? { options: [n.src] } : {}),
       ...(n.type === 'text' ? { text: n.prompt, content: n.prompt } : {}) };
     const next = { id: nodeId, canvas_id: state.canvasId, type: n.type, position: n.position || { x: 100 + index * 400, y: 200 }, data };
     if (existing) {
@@ -207,7 +212,10 @@ export async function run(client, plan, state, save, options) {
     const remote = canvas.nodes.find(n => n.id === state.nodes[node.id]);
     if (!remote) throw new Error(`${node.id}: remote node disappeared`);
     await batch(client, state.canvasId, 'nodes', [{ action: 'update', updates: [{ id: remote.id,
-      data: { ...remote.data, src: job.outputs[0], taskInfo: { taskId: job.ids[0], status: 'completed', injectType: 'src' } } }] }]);
+      data: { ...remote.data, src: job.outputs[0], options: job.outputs, historyPreviewSrc: '', historyVariantCount: job.outputs.length,
+        taskInfo: { taskId: job.ids[0], status: 'completed', injectType: 'src' } } }] }]);
+    const persisted = (await getCanvas(client, state.canvasId)).nodes.find(n => n.id === remote.id);
+    if (persisted?.data?.src !== job.outputs[0] || !job.outputs.every(url => persisted.data.options?.includes(url))) throw new Error(`${node.id}: output writeback was not retained; close other editors and resume`);
     options.log?.({ node: node.id, status: 'completed', outputs: job.outputs });
   }
   return { canvasId: state.canvasId, estimatedCostReserved: state.reservedCost, jobs: state.jobs };
