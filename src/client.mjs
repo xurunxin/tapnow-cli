@@ -78,6 +78,30 @@ export class Client {
     this.orgId ||= this.user.org_id;
     return { userId: this.user.user_id, orgId: this.orgId };
   }
+  async videoDurations(urls) {
+    if (!this.page) throw new Error('Reference video validation requires browser mode');
+    this.mediaDurations ||= new Map();
+    const result = [];
+    for (const url of urls) {
+      if (!this.mediaDurations.has(url)) {
+        const duration = await this.page.evaluate(url => new Promise((resolve, reject) => {
+          const video = document.createElement('video');
+          const finish = (error) => {
+            const duration = video.duration;
+            clearTimeout(timer); video.onloadedmetadata = video.onerror = null;
+            video.removeAttribute('src'); video.load();
+            if (error || !Number.isFinite(duration) || duration <= 0) reject(new Error('Cannot measure reference video duration; check the asset URL before generation'));
+            else resolve(duration);
+          };
+          const timer = setTimeout(() => finish(true), 20000);
+          video.preload = 'metadata'; video.onloadedmetadata = () => finish(false); video.onerror = () => finish(true); video.src = url;
+        }), url);
+        this.mediaDurations.set(url, duration);
+      }
+      result.push(this.mediaDurations.get(url));
+    }
+    return result;
+  }
   async runtime(action, args = {}) {
     if (!this.page) throw new Error('This model needs browser mode for current TapNow parameter conversion; unset TAPNOW_ACCESS_TOKEN or provide explicit request parameters');
     return this.page.evaluate(async ({ action, args }) => {

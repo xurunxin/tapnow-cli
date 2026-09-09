@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "project": { "key": "h3-film", "name": "H3 纸鹤镜头" },
+  "nodes": [
+    { "id": "film", "type": "video", "model": "MiniMax-H3", "mode": "text_to_video", "prompt": "画面与动作：窗边木桌上的白色纸鹤轻轻抬起翅膀一次，然后停下。镜头在五秒内缓慢推近，保持折痕清晰。环境声音：轻微纸张摩擦声和远处雨声。配乐：无。", "params": { "aspectRatio": "16:9", "duration": 5, "resolution": "768P" } }
+  ],
+  "links": []
+}

@@ -37,6 +37,12 @@ HTTP 成功不等于业务成功，必须校验 `code`。业务错误只输出 H
 
 复杂视频模式的输入字段由网页转换器产生，CLI 不再叠加通用 images 字段。直接令牌模式只有明确实现的基础转换，其他模型需要默认浏览器或用户核对后的 `request`。
 
+v0.2.0 的 `parameters.mjs` 将目录的模式、枚举、reference ranges、aspectRatioPolicy 和视频时长规则用于校验。GPT 自定义像素约束来自同一网页构建的尺寸处理逻辑；CLI 拒绝会被静默舍入的值。聚焦模型的未知字段拒绝执行，其他模型扩展字段仍由网页适配器处理。
+
+网页转换后的 prompt 优先于原始 prompt，保留 Seedance/H3 素材标签转换。图像的 image-edit scene 也保留。报价将带角色的输入对象转换成 URL 数组，并处理 H3 的 first/last_frame_image_url、reference_*_urls 别名，匹配网页报价构造。
+
+有 referenceVideoDurationRange 的模型在生成/预览前通过 HTMLVideoElement 测量实际输入时长，读取失败即停止。清单 videoDurations 只用于提前发现错误，不能替代真实测量。同一 CLI 会话缓存已测 URL；可变 URL 的内容在会话内不应更换。
+
 ## 运行边界
 
 同一清单按依赖顺序串行生成，支持中断续跑。`times` 可请求多份结果，但下游默认取每个父节点的首个结果，不自动做笛卡尔积。没有跨机器分布式锁；不要把同一个状态文件拷贝到两台机器并行执行。

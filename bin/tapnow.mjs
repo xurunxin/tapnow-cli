@@ -2,20 +2,27 @@
 import { Command, InvalidArgumentError } from 'commander';
 import fs from 'node:fs/promises';
 import { resolve } from 'node:path';
+import { z } from 'zod';
 import { Client } from '../src/client.mjs';
-import { catalog, useCatalog, generationBody, estimate } from '../src/models.mjs';
-import { readPlan, order, withState, apply, run, getCanvas, getTasks, inputsFor, taskOutputs } from '../src/workflow.mjs';
+import { catalog, useCatalog, generationBody, estimate, frontendParams, capabilities, modelFor } from '../src/models.mjs';
+import { Schema, readPlan, order, withState, apply, run, getCanvas, getTasks, inputsFor, taskOutputs } from '../src/workflow.mjs';
 import { upload, download } from '../src/assets.mjs';
+import { configureFile } from '../src/configure.mjs';
+import { listSkills, showSkill, installSkills } from '../src/skills.mjs';
+import { errorResult } from '../src/errors.mjs';
 
-const cli = new Command().name('tapnow').description('TapNow 项目、节点和 AI 生图/生视频工作流 CLI').version('0.1.0')
+const cli = new Command().name('tapnow').description('TapNow 项目、节点和 AI 生图/生视频工作流 CLI').version('0.2.0')
   .option('--org <id>', '明确指定个人或团队组织 ID')
   .option('--cdp <url>', '连接本机已登录 Chrome CDP')
   .option('--profile <directory>', '独立浏览器用户目录')
   .option('--channel <name>', '浏览器 channel', 'chrome')
   .option('--catalog <file>', '使用 models refresh 导出的模型目录')
-  .option('--headed', '显示浏览器');
+  .option('--headed', '显示浏览器')
+  .option('--agent', '输出版本化 JSON envelope，适合 agent 集成');
+cli.exitOverride();
+cli.configureOutput({ writeErr: () => {} });
 cli.hook('preAction', async () => { if (cli.opts().catalog) useCatalog(JSON.parse(await fs.readFile(cli.opts().catalog, 'utf8'))); });
-const out = data => console.log(JSON.stringify(data, null, 2));
+const out = data => console.log(JSON.stringify(cli.opts().agent ? { schemaVersion: 1, ok: true, data } : data, null, 2));
 const number = s => { const n = Number(s); if (!Number.isFinite(n) || n < 0) throw new InvalidArgumentError('Expected a nonnegative number'); return n; };
 const positive = s => { const n = number(s); if (n <= 0) throw new InvalidArgumentError('Expected a positive number'); return n; };
 async function connected(fn, { login = false, org, session } = {}) {
@@ -47,9 +54,21 @@ projects.command('export <id> <file>').action((id, file) => connected(async c =>
 const models = cli.command('models').description('模型目录与参数');
 models.command('list').option('--type <type>', 'image/video').action(o => out({ observedAt: catalog.observedAt, source: catalog.source, models: catalog.models.filter(m => !o.type || m.type === o.type).map(m => ({ type: m.type, model: m.model, provider: m.provider, hidden: !!m.isHidden, modes: m.supportedModes || m.variants?.map(v => v.modelType) })) }));
 models.command('show <model>').action(model => { const result = catalog.models.filter(m => m.model === model); if (!result.length) throw new Error('Model not found'); out(result); });
+models.command('params <model>').option('--mode <mode>', '生成模式').description('结构化有效参数、默认值、输入范围和组合约束').action((model, o) => {
+  const m = catalog.models.find(m => m.model === model); if (!m) throw new Error('Model not found');
+  out({ observedAt: catalog.observedAt, source: catalog.source, ...capabilities(m, o.mode) });
+});
 models.command('refresh <file>').description('读取当前网页模型目录并导出（不覆盖内置快照）').action(file => connected(async c => { const result = await c.runtime('catalog'); await fs.writeFile(file, JSON.stringify(result, null, 2), { flag: 'wx' }); out({ path: resolve(file), count: result.models.length }); }));
 
 const workflow = cli.command('workflow').description('声明式项目工作流');
+const collect = (value, previous) => [...previous, value];
+workflow.command('configure <file> <node>').description('校验并预览参数调整；显式保存')
+  .option('--model <model>', '切换模型').option('--mode <mode>', '切换模式，auto 按输入判断')
+  .option('--reset-params', '清空旧模型参数后使用新默认值').option('--times <n>', '生成数量', positive)
+  .option('--set <key=value>', '设置参数，值按 JSON 或字符串解析，可重复', collect, [])
+  .option('--unset <key>', '移除参数，可重复', collect, [])
+  .option('--write', '保存到原工作流').option('--output <file>', '写到不存在的新文件')
+  .action(async (file, node, o) => out(await configureFile(file, node, o)));
 workflow.command('init <file>').option('--name <name>', '项目名称', 'My TapNow Project').action(async (file, o) => {
   const example = JSON.parse(await fs.readFile(new URL('../examples/image-to-video.json', import.meta.url), 'utf8'));
   example.project.name = o.name;
@@ -72,10 +91,30 @@ workflow.command('estimate <file>').option('--state <file>', '状态文件').act
       let inputs;
       try { inputs = inputsFor(plan, node, state); }
       catch (e) { quotes.push({ node: node.id, deferred: true, reason: e.message }); continue; }
-      const body = await generationBody(c, node, inputs, state.canvasId, state.nodes[node.id]);
+      const body = await generationBody(c, { ...node, prompt: [...inputs.texts, node.prompt].filter(Boolean).join('\n\n') }, inputs, state.canvasId, state.nodes[node.id]);
       quotes.push({ node: node.id, ...await estimate(c, node.type, body) });
     }
     out({ quotes, knownTotal: quotes.reduce((sum, q) => sum + (q.cost || 0), 0), complete: !quotes.some(q => q.deferred) });
+  }, { org: plan.project.orgId });
+});
+workflow.command('prepare <file>').option('--state <file>', '状态文件').description('只读解析实际模型请求，不生成、不扣积分').action(async (file, o) => {
+  const plan = await readPlan(file);
+  let state = { jobs: {}, nodes: {} };
+  try { state = JSON.parse(await fs.readFile(o.state || file + '.tapnow-state.json', 'utf8')); } catch (e) { if (e.code !== 'ENOENT') throw e; }
+  await connected(async c => {
+    const nodes = [];
+    for (const node of order(plan)) {
+      if (node.type === 'text' || node.src) continue;
+      let inputs;
+      try { inputs = inputsFor(plan, node, state); } catch (e) { nodes.push({ node: node.id, deferred: true, reason: e.message }); continue; }
+      const ready = { ...node, prompt: [...inputs.texts, node.prompt].filter(Boolean).join('\n\n') };
+      const resolved = frontendParams(ready, inputs), caps = capabilities(modelFor(node.type, node.model), resolved.modelType);
+      nodes.push({ node: node.id, resolved, request: await generationBody(c, ready, inputs, state.canvasId, state.nodes[node.id]),
+        checks: { suppliedVideoDurations: node.videoDurations || [], referenceVideoDuration: caps.videoDuration,
+          measuredVideoDurations: caps.videoDuration && resolved.videos.length ? await c.videoDurations(resolved.videos) : [],
+          mediaInspectionRequired: false } });
+    }
+    out({ nodes, complete: !nodes.some(n => n.deferred), submitted: false });
   }, { org: plan.project.orgId });
 });
 workflow.command('run <file>').option('--state <file>', '状态文件').option('--execute', '明确提交消耗积分的生成请求')
@@ -123,5 +162,18 @@ const assets = cli.command('assets').description('输入素材上传与结果下
 assets.command('upload <file>').action(file => connected(async c => out(await upload(c, file))));
 assets.command('download <url> <file>').action(async (url, file) => out(await download(url, file)));
 
+const skills = cli.command('skills').description('可安装的 TapNow Agent Skills');
+skills.command('list').action(async () => out(await listSkills()));
+skills.command('show <name>').action(async name => out(await showSkill(name)));
+skills.command('install <names...>').description('安装内置技能，名称 all 表示全部；不同内容拒绝覆盖')
+  .option('--target <agent>', 'codex / claude / agents', 'codex').option('--global', '安装到用户技能目录')
+  .option('--dir <directory>', '明确指定技能父目录').option('--dry-run', '只预览安装路径')
+  .action(async (names, o) => out(await installSkills(names, { ...o, agent: o.target })));
+cli.command('schema').description('输出工作流 JSON Schema').action(() => out(z.toJSONSchema(Schema)));
+cli.command('commands').description('输出可用命令和选项供 agent 发现').action(() => {
+  const describe = c => ({ name: c.name(), description: c.description(), arguments: c.registeredArguments.map(a => ({ name: a.name(), required: a.required, variadic: a.variadic })), options: c.options.map(o => ({ flags: o.flags, description: o.description, required: o.mandatory, default: o.defaultValue })), commands: c.commands.map(describe) });
+  out(describe(cli));
+});
+
 try { await cli.parseAsync(); }
-catch (e) { console.error(JSON.stringify({ error: e.name === 'ZodError' ? e.issues : e.message, code: e.code, requestId: e.requestId })); process.exitCode = 1; }
+catch (e) { if (e.exitCode === 0) process.exitCode = 0; else { console.error(JSON.stringify(errorResult(e))); process.exitCode = 1; } }

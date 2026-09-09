@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "project": { "key": "gpt-seedance", "name": "GPT Image → Seedance 产品短片" },
+  "nodes": [
+    { "id": "hero", "type": "image", "model": "gpt-image-2", "mode": "text_to_image", "prompt": "浅木色桌面上的蓝色纸艺立方体，柔和窗光，干净背景，横向产品摄影，无文字", "params": { "aspectRatio": "16:9", "imageSize": "1K", "quality": "low" } },
+    { "id": "film", "type": "video", "model": "seedance-2.0", "mode": "image_to_video", "prompt": "保持参考图中的蓝色纸艺立方体和光线。镜头在五秒内缓慢向前移动，纸张边缘轻微颤动。环境安静，无对白。", "params": { "duration": 5, "resolution": "720p", "generateAudio": true } }
+  ],
+  "links": [{ "from": "hero", "to": "film" }]
+}

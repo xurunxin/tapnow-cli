@@ -9,7 +9,8 @@ const Node = z.object({
   id, type: z.enum(['text', 'image', 'video']), title: z.string().optional(), prompt: z.string().default(''),
   model: z.string().optional(), mode: z.string().optional(), params: z.record(z.string(), z.unknown()).default({}),
   request: z.record(z.string(), z.unknown()).optional(), times: z.number().int().min(1).max(8).default(1),
-  src: z.url().optional(), images: media.optional(), videos: media.optional(),
+  src: z.url().optional(), images: media.optional(), videos: media.optional(), audios: media.optional(),
+  videoDurations: z.array(z.number().positive().finite()).optional(),
   position: z.object({ x: z.number().finite(), y: z.number().finite() }).optional(),
 }).strict();
 export const Schema = z.object({
@@ -27,10 +28,10 @@ export function validate(input) {
     if (n.type !== 'text' && !n.src) {
       if (!n.model) throw new Error(`${n.id}: model is required`);
       const incoming = plan.links.filter(l => l.to === n.id).map(l => plan.nodes.find(p => p.id === l.from));
-      frontendParams(n, { images: incoming.filter(p => p?.type === 'image').map(() => 'https://example.invalid/reference') });
+      frontendParams(n, { images: incoming.filter(p => p?.type === 'image').map(() => 'https://example.invalid/reference'), videos: incoming.filter(p => p?.type === 'video').map(() => 'https://example.invalid/reference') });
     }
     for (const key of ['metadata', 'context', 'prompt', 'times']) if (n.request && key in n.request) throw new Error(`${n.id}: request may not override ${key}`);
-    for (const key of ['model', 'provider', 'prompt', 'times', 'images', 'videos', 'modelType']) if (key in n.params) throw new Error(`${n.id}: set ${key} at node level, not params`);
+    for (const key of ['model', 'provider', 'prompt', 'times', 'images', 'videos', 'audios', 'modelType']) if (key in n.params) throw new Error(`${n.id}: set ${key} at node level, not params`);
   }
   const links = new Set();
   for (const l of plan.links) {
@@ -107,8 +108,9 @@ export async function apply(client, plan, state, save) {
     let params = n.type === 'text' ? existing?.data?.params || {} : {};
     if (n.type !== 'text' && !n.src) {
       const parentImages = plan.links.filter(l => l.to === n.id && plan.nodes.find(p => p.id === l.from)?.type === 'image').map(() => 'https://example.invalid/reference');
-      const p = frontendParams(n, { images: parentImages });
-      const { prompt, images, videos, times, ...rest } = p;
+      const parentVideos = plan.links.filter(l => l.to === n.id && plan.nodes.find(p => p.id === l.from)?.type === 'video').map(() => 'https://example.invalid/reference');
+      const p = frontendParams(n, { images: parentImages, videos: parentVideos });
+      const { prompt, images, videos, audios, times, ...rest } = p;
       params = { ...rest, provider: modelFor(n.type, n.model).provider, ...(n.times > 1 ? { times: n.times } : {}) };
     }
     const data = { ...existing?.data, src: existing?.data?.src || n.src || '', prompt: n.prompt, title: n.title || n.id,
