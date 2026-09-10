@@ -101,6 +101,8 @@ tapnow projects export CANVAS_ID canvas-backup.json
 
 ## 模型和参数
 
+项目管理扩展见 [Agent 与人类共同维护项目](docs/project-management.md)：支持 `projects overview/open/checkout/share`、个人/团队素材库、角色设定版本、分组/布局变更计划、评论收件箱与回复，以及 `credits balance/quotas`。管理写操作保留快照和执行记录，检测画布冲突；旧项目产出可复用为素材，新工作默认追加到空闲区域。
+
 ```powershell
 tapnow models list --type image
 tapnow models list --type video

@@ -9,6 +9,8 @@ Use the installed `tapnow` executable. If unavailable, install the user's checke
 
 Use `auth status`, `orgs`, and `projects list` to identify the intended organization and canvas. Reuse the user's authorized account. `auth login` opens the independent browser profile for interactive login; automation that needs login should report this action to the user. Tokens belong outside manifests and skill files.
 
+When continuing an existing project, reusing library assets or roles, organizing groups/layout, reviewing comments, or starting team collaboration, read [project-management.md](references/project-management.md). It defines the intake, change-plan and handoff workflow. Use `credits balance` and `credits quotas` to distinguish spendable Tapies from separate usage grants.
+
 Represent each requirement as a workflow JSON file and a separate state file. `workflow init` provides a starting graph. `models list` identifies exact model IDs; `models params MODEL --mode MODE` describes defaults, input ranges and valid parameters. For image or video creative work, consult the installed `tapnow-image` or `tapnow-video` skill when available; each is independently usable.
 
 `workflow configure FILE NODE --set key=value` previews a validated edit. Use `--model MODEL --reset-params --mode MODE` when switching families; review retained references and links. Add `--write` to persist or `--output NEW_FILE` for a separate manifest. A submitted workflow/state is immutable: changed requirements need a new workflow/state and an intentional project choice.

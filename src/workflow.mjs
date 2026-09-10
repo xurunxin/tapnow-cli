@@ -11,6 +11,7 @@ const Node = z.object({
   request: z.record(z.string(), z.unknown()).optional(), times: z.number().int().min(1).max(8).default(1),
   src: z.url().optional(), images: media.optional(), videos: media.optional(), audios: media.optional(),
   videoDurations: z.array(z.number().positive().finite()).optional(),
+  provenance: z.record(z.string(), z.unknown()).optional(),
   position: z.object({ x: z.number().finite(), y: z.number().finite() }).optional(),
 }).strict();
 export const Schema = z.object({
@@ -77,7 +78,7 @@ export async function getCanvas(client, id) {
 async function batch(client, canvasId, kind, actions) {
   if (actions.length) await client.request('POST', canvasPath(canvasId) + `/${kind}:batchActions`, { canvas_id: canvasId, actions, created_by_role: 'user' });
 }
-function config(data) {
+export function config(data) {
   const { variant, ...params } = data.params || {};
   // The web editor adds UI variant selectors and text-model defaults on first open.
   return { prompt: data.prompt, title: data.title, params: typeof data.text === 'string' ? {} : params, type: data.type };
@@ -102,10 +103,12 @@ export async function apply(client, plan, state, save) {
   if (canvas.org_id && canvas.org_id !== identity.orgId) throw new Error('Canvas is in another organization');
   const creates = [], updates = [];
   const sorted = order(plan);
+  const rootNodes = canvas.nodes.filter(n => !n.parent_id);
+  const appendX = rootNodes.length ? Math.max(...rootNodes.map(n => (n.position?.x || 0) + (n.measured?.width || 320))) + 120 : 100;
   for (const [index, n] of sorted.entries()) {
     state.nodes[n.id] ||= `${n.type}-${hash([state.namespace, n.id]).slice(0, 32)}`;
     const nodeId = state.nodes[n.id], existing = canvas.nodes.find(r => r.id === nodeId);
-    let params = n.type === 'text' ? existing?.data?.params || {} : {};
+    let params = n.type === 'text' || n.src ? existing?.data?.params || {} : {};
     if (n.type !== 'text' && !n.src) {
       const parentImages = plan.links.filter(l => l.to === n.id && plan.nodes.find(p => p.id === l.from)?.type === 'image').map(() => 'https://example.invalid/reference');
       const parentVideos = plan.links.filter(l => l.to === n.id && plan.nodes.find(p => p.id === l.from)?.type === 'video').map(() => 'https://example.invalid/reference');
@@ -114,10 +117,10 @@ export async function apply(client, plan, state, save) {
       params = { ...rest, provider: modelFor(n.type, n.model).provider, ...(n.times > 1 ? { times: n.times } : {}) };
     }
     const data = { ...existing?.data, src: existing?.data?.src || n.src || '', prompt: n.prompt, title: n.title || n.id,
-      type: n.src ? 'upload' : 'generate', params,
-      ...(n.src ? { options: [n.src] } : {}),
+      type: (n.src || n.type === 'text') && existing?.data?.type ? existing.data.type : n.src ? 'upload' : 'generate', params,
+      ...(n.src ? { options: [...new Set([...(existing?.data?.options || []), n.src])] } : {}),
       ...(n.type === 'text' ? { text: n.prompt, content: n.prompt } : {}) };
-    const next = { id: nodeId, canvas_id: state.canvasId, type: n.type, position: n.position || { x: 100 + index * 400, y: 200 }, data };
+    const next = { id: nodeId, canvas_id: state.canvasId, type: n.type, position: n.position || existing?.position || { x: appendX + index * 440, y: 200 }, data };
     if (existing) {
       const baseline = state.configs?.[n.id];
       if (baseline && hash(config(existing.data)) !== baseline && hash(config(existing.data)) !== hash(config(data))) throw new Error(`${n.id}: canvas was edited outside CLI; export/reconcile before applying`);

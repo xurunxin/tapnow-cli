@@ -10,8 +10,11 @@ import { upload, download } from '../src/assets.mjs';
 import { configureFile } from '../src/configure.mjs';
 import { listSkills, showSkill, installSkills } from '../src/skills.mjs';
 import { errorResult } from '../src/errors.mjs';
+import { registerManagement } from '../src/management-cli.mjs';
+import { ChangeSchema } from '../src/canvas-management.mjs';
+import { RoleSchema, AssetSchema } from '../src/library.mjs';
 
-const cli = new Command().name('tapnow').description('TapNow 项目、节点和 AI 生图/生视频工作流 CLI').version('0.2.0')
+const cli = new Command().name('tapnow').description('TapNow 项目、节点和 AI 生图/生视频工作流 CLI').version('0.3.0')
   .option('--org <id>', '明确指定个人或团队组织 ID')
   .option('--cdp <url>', '连接本机已登录 Chrome CDP')
   .option('--profile <directory>', '独立浏览器用户目录')
@@ -45,7 +48,7 @@ cli.command('orgs').description('列出可用组织').action(() => connected(asy
 cli.command('balance').description('查看积分余额').action(() => connected(async c => out(await c.request('GET', '/api/billing/v2/wallet/balance'))));
 
 const projects = cli.command('projects').description('个人/团队画布项目');
-projects.command('list').option('--limit <n>', '分页条数', positive, 30).option('--offset <n>', '偏移', number, 0).action(o => connected(async c => out(await c.request('GET', '/api/canvas/v1/canvases?' + new URLSearchParams({ limit: o.limit, offset: o.offset, type: 'canvas', sort_by: 'updated_at', sort_order: 'desc' })))));
+projects.command('list').option('--limit <n>', '分页条数', positive, 30).option('--offset <n>', '偏移', number, 0).option('--keyword <text>', '按名称搜索项目').action(o => connected(async c => out(await c.request('GET', '/api/canvas/v1/canvases?' + new URLSearchParams({ limit: o.limit, offset: o.offset, type: 'canvas', sort_by: 'updated_at', sort_order: 'desc', ...(o.keyword ? { keyword: o.keyword } : {}) })))));
 projects.command('create <name>').option('--description <text>', '项目需求', '').option('--team', '向当前组织团队共享').action((name, o) => connected(async c => { await c.identity(); out(await c.request('POST', '/api/canvas/v1/canvases', { name, description: o.description, is_public: false, is_shared_with_org: !!o.team })); }));
 projects.command('get <id>').action(id => connected(async c => out(await getCanvas(c, id))));
 projects.command('rename <id> <name>').action((id, name) => connected(async c => out(await c.request('PATCH', '/api/canvas/v1/canvases/' + encodeURIComponent(id), { name }))));
@@ -169,11 +172,15 @@ skills.command('install <names...>').description('安装内置技能，名称 al
   .option('--target <agent>', 'codex / claude / agents', 'codex').option('--global', '安装到用户技能目录')
   .option('--dir <directory>', '明确指定技能父目录').option('--dry-run', '只预览安装路径')
   .action(async (names, o) => out(await installSkills(names, { ...o, agent: o.target })));
-cli.command('schema').description('输出工作流 JSON Schema').action(() => out(z.toJSONSchema(Schema)));
+cli.command('schema').description('输出 JSON Schema').option('--kind <kind>', 'workflow / management / role / asset', 'workflow').action(o => {
+  const schema = { workflow: Schema, management: ChangeSchema, role: RoleSchema, asset: AssetSchema }[o.kind];
+  if (!schema) throw new Error('Unknown schema kind'); out(z.toJSONSchema(schema));
+});
 cli.command('commands').description('输出可用命令和选项供 agent 发现').action(() => {
   const describe = c => ({ name: c.name(), description: c.description(), arguments: c.registeredArguments.map(a => ({ name: a.name(), required: a.required, variadic: a.variadic })), options: c.options.map(o => ({ flags: o.flags, description: o.description, required: o.mandatory, default: o.defaultValue })), commands: c.commands.map(describe) });
   out(describe(cli));
 });
 
+registerManagement({ cli, projects, connected, out, positive });
 try { await cli.parseAsync(); }
 catch (e) { if (e.exitCode === 0) process.exitCode = 0; else { console.error(JSON.stringify(errorResult(e))); process.exitCode = 1; } }

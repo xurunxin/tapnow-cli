@@ -1,4 +1,7 @@
 node_modules/
+*.canvas-plan.json*
+*.review-cursor.json*
+*.canvas.json
 .research/
 .tapnow/
 *.tapnow-state.json

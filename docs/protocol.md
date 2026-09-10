@@ -43,6 +43,16 @@ v0.2.0 的 `parameters.mjs` 将目录的模式、枚举、reference ranges、asp
 
 有 referenceVideoDurationRange 的模型在生成/预览前通过 HTMLVideoElement 测量实际输入时长，读取失败即停止。清单 videoDurations 只用于提前发现错误，不能替代真实测量。同一 CLI 会话缓存已测 URL；可变 URL 的内容在会话内不应更换。
 
+## 项目管理扩展（v0.3）
+
+`/api/library/v1`：个人/团队 spaces 的 folders、folders/{id}/assets、assets:search、assets:batchCreate、assets/{id}、elements 及 elements/{id}。目录使用 spaceType/parentId，素材保存外层 folderId、内层 asset_type/source_url；角色使用 camelCase 成员字段、idempotencyKey、expectedRevision。角色返回 element_id、revision、assets[].asset_id，revision 为不透明字符串。库中普通素材复制为成员时使用 sourceAssetId，assetId 只复用同一角色已有成员。
+
+原生画布评论位于 type=comment 节点 data.comments，含 id/content/author/authorId/timestamp；回复保存完整原数组后追加。评论确认 cursor 为 CLI 本地记录，不伪造平台 resolve API。
+
+分组 type=group，节点归属使用 parent_id，尺寸使用 measured；网页 React Flow 的 parentId、width、height 不能直接发给节点接口。服务器会拒绝不支持的请求字段。管理计划走同一 nodes:batchActions 接口，前后快照和 hash/readback 保护在 canvas-management.mjs。
+
+团队转换沿用网页 PATCH /canvases/{id} 的 is_shared_with_org=true，不改变 org_id。钱包查询 /api/billing/v2/wallet/balance；独立使用额度 /api/billing/v2/wallet/usage-quotas。
+
 ## 运行边界
 
 同一清单按依赖顺序串行生成，支持中断续跑。`times` 可请求多份结果，但下游默认取每个父节点的首个结果，不自动做笛卡尔积。没有跨机器分布式锁；不要把同一个状态文件拷贝到两台机器并行执行。

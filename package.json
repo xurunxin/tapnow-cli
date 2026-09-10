@@ -1,6 +1,6 @@
 {
   "name": "@xurunxin/tapnow-cli",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Manage TapNow canvas projects and resumable image/video workflows from the terminal",
   "type": "module",
   "bin": {
@@ -19,6 +19,7 @@
     "src",
     "data",
     "examples",
+    "docs",
     "skills",
     "README.md"
   ],
